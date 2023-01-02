@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 str = "Holberton School"
-f"{str} {str} {str}\n"
+print(f"{str} {str} {str}")
 print(str[:9])
-print{"\n"}
+print("\n")
