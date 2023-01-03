@@ -5,3 +5,4 @@ def uppercase(str):
         tsm1 = tsm1 + chr((ord(str[count]) - 32))
         else:
         tsm1 = tsm1 + str[count]
+    print("{}".format(str))
