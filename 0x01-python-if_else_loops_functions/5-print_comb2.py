@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-for count in range(0,100):
+for count in range(0, 100):
     if count != 99:
-        print("{}".format(str(count).zfill(2)) ,end=", ")
+        print("{}".format(str(count).zfill(2)), end=", ")
     else:
-        print ("{}".format(count))
+        print("{}".format(count))
