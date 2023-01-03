@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for count in range(97, 123):
-	print(chr(count), end="")
+	print("{}".format(chr(count)), end="")
