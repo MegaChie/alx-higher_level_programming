@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def uppercase(str):
-    for count in range(len(str)):
-        if(str[count] >= 'a' and str[count] <= 'z'):
-            tsm1 = tsm1 + chr((ord(str[count]) - 32))
-            print("{}".format(tsm1))
-    else:
-        tsm1 = tsm1 + str[count]
-        print("{}".format(tsm1))
+def uppercase(str):
+    for place in str:
+        place = ord(place)
+        if 97 <= place <= 122:
+            place = place - 32
+        print("{}".format(chr(place)), end='')
+    print()
