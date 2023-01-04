@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def uppercase(str):
-def uppercase(str):
     for place in str:
         place = ord(place)
         if 97 <= place <= 122:
