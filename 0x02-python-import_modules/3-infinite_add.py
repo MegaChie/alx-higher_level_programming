@@ -6,6 +6,6 @@ if __name__ == "__main__":
 	count = 1
 	result = 0
 	while count <= argumentCount:
-		result += int(sys.argv[index])
+		result += int(sys.argv[count])
 		count += 1
 	print("{}".format(result))
