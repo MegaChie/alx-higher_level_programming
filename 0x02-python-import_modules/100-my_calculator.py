@@ -3,7 +3,7 @@ if __name__ == "__main__":
     import sys
     from calculator_1 import sub, add, div, mul
     agumentVector = sys.argv[1:]
-    argumentCount = len(argumentCount)
+    argumentCount = len(agumentVector)
     operator = ["+", "-", "*", "/"]
     if argumentCount != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
