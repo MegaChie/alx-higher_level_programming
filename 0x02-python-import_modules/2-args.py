@@ -8,9 +8,9 @@ if __name__ == "__main__":
 		print(f"{argumentCount} arguments.")
 	elif argumentCount == 1:
 		print(f"{argumentCount} argument:")
-		print(f"{index}: {sys.argv[1]}")
+		print(f"{count}: {sys.argv[1]}")
 	elif argumentCount > 1:
 		print(f"{argumentCount} arguments:")
-		while index <= argumentCount:
-			print(f"{index}: {sys.argv[index]}")
-			index = index +1
+		while count <= argumentCount:
+			print(f"{count}: {sys.argv[count]}")
+			count = count +1
