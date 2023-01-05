@@ -5,12 +5,12 @@ if __name__ == "__main__":
 	argumentCount = len(argumentVector)
 	count = 1
 	if argumentCount == 0:
-		print(f"{argumentCount} arguments.")
+		print("{argumentCount} arguments.")
 	elif argumentCount == 1:
-		print(f"{argumentCount} argument:")
-		print(f"{count}: {sys.argv[1]}")
+		print("{argumentCount} argument:")
+		print("{count}: {sys.argv[1]}")
 	elif argumentCount > 1:
-		print(f"{argumentCount} arguments:")
+		print("{argumentCount} arguments:")
 		while count <= argumentCount:
-			print(f"{count}: {sys.argv[count]}")
+			print("{count}: {sys.argv[count]}")
 			count = count +1
