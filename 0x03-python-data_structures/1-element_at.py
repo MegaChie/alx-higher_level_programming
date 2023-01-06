@@ -6,4 +6,4 @@ def element_at(my_list, idx):
     elif count >= len(my_list):
         return None
     else:
-        print("Element at index {} is {}".format(count, my_list[count]))
+        print("{}".format(my_list[count]))
