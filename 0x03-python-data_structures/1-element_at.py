@@ -6,4 +6,4 @@ def element_at(my_list, idx):
     elif count >= len(my_list):
         return None
     else:
-        print("{}".format(my_list[count]))
+        return my_list[count]
