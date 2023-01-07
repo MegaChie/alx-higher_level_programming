@@ -5,5 +5,5 @@ def no_c(my_string):
     for count in holder:
         if count == 'c' or count == 'C':
             holder[place] = ""
-            place = place + 1
+        place += 1
     return "".join(holder)
