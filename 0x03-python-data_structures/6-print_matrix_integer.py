@@ -2,7 +2,7 @@
 def print_matrix_integer(matrix=[[]]):
     if not matrix:
         print()
-    elif:
+    else:
         for raw in range(len(matrix)):
             for collumn in range(len(matrix[raw])):
                 if collumn != len(matrix[raw]) - 1:
