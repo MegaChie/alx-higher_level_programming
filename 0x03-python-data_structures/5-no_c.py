@@ -1,3 +1,9 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    print("{}".format.(my_string.translate({ord(i): None for i in 'cC'})))
+    holder = list(my_string)
+    place = 0
+    for count in holder:
+        if count == 'c' or count == 'C':
+            holder[place] = ""
+            place = place + 1
+    return "".join(holder)
