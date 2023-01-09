@@ -1,6 +1,6 @@
 /**
- * print_python_list_info - Prints basic info about Python lists.
- * @p: A PyObject list.
+ * print_python_list_info - check code.
+ * @p: pointer variable
  */
 void print_python_list_info(PyObject *p)
 {
