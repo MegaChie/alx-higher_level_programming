@@ -6,7 +6,6 @@
             count += 1
         print()
         print("nb_print: {}".format(count))
-        return count
     except IndexError:
         print()
         print("nb_print: {}".format(count))
