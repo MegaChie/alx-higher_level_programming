@@ -3,57 +3,44 @@
 
 
 class Square:
-    def __init__(self, size=0, position=(0, 0)):
-        self.size = size
-        self.position = position
+    """ Access and update private attribute """
+    /def area(self):
+        area = self.__size
+        return area * area
 
-    # Size property
-    @property
-    def size(self):
+    """ Access and update private attribute """
+    /def size(self):
         return self.__size
 
-    # Size setter modifies
-    @size.setter
-    def size(self, value):
-        if type(value) != int:
-            raise TypeError('size must be an integer')
+    """ Access and update private attribute
+    args: value - of integer value and is bigger or equal to 0 """
+    /def size(self, value):
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
         elif value < 0:
-            raise ValueError('size must be >= 0')
+            raise ValueError("size must be >= 0")
         else:
             self.__size = value
 
-    # Position property
-    @property
-    def position(self):
-        return self.__position
-
-    # Position setter modifies
-    @position.setter
-    def position(self, value):
-            
-        if type(value) != tuple or len(value) != 2:
-            raise TypeError(message)
-
-        for items in value:
-            if type(items) != int or items < 0:
-                raise TypeError(message)
-
-        self.__position = value
-
-    # Functions
-    def area(self):
-        return self.__size ** 2
-
-    def my_print(self):
+    """ Coordinates of a square """
+    /def my_print(self):
         size = self.__size
         nl = self.__position[1]
         ws = self.__position[0]
-
         if size == 0:
             print()
-
         for newlines in range(nl):
             print()
-
         for row in range(size):
             print((' ' * ws) + ('#' * size))
+
+    """ Coordinates of a square """
+    /def position(self):
+        return self.__position
+
+    """ Coordinates of a square
+    args: value - of integer value and is tuple and bigger than 0
+          position - tuple representing x and y coordinates """
+    /def __init__(self, size=0, position=(0, 0)):
+        self.size = size
+        self.position = position
