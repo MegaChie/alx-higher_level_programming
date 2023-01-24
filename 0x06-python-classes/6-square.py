@@ -24,15 +24,7 @@ class Square:
 
     """ Coordinates of a square """
     def my_print(self):
-        size = self.__size
-        nl = self.__position[1]
-        ws = self.__position[0]
-        if size == 0:
-            print()
-        for newlines in range(nl):
-            print()
-        for row in range(size):
-            print((' ' * ws) + ('#' * size))
+        print(self.pos_print(), end='')
 
     """ Coordinates of a square """
     def position(self):
@@ -44,3 +36,32 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
+
+    """ Coordinates of a square """
+    def __str__(self):
+        self.my_print()
+
+
+    def position(self, value):
+        if not type(value) is not tuple:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if len(value) != 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if len([i for i in value if isinstance(i, int) and i >= 0]) != 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        self.__position = value
+
+
+    def pos_print(self):
+        pos = ""
+        if self.size == 0:
+            return "\n"
+        for w in range(self.position[1]):
+            pos += "\n"
+        for w in range(self.size):
+            for i in range(self.position[0]):
+                pos += " "
+            for j in range(self.size):
+                pos += "#"
+            pos += "\n"
+        return pos
