@@ -6,7 +6,7 @@ class Node:
     """ Singly linked list
     args: data - value of node
           next_node - pointer to next node in list """
-    def __init__(self, data, next_node=None)
+    def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
 
