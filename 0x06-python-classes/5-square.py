@@ -16,7 +16,7 @@ class Square:
     """ Access and update private attribute """
     def area(self):
         area = self.__size
-        return area * 2
+        return area * area
 
     """ Access and update private attribute """
     def size(self):
