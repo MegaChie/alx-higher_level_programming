@@ -3,16 +3,16 @@
 
 
 class Square:
-    """ Access and update private attribute """
+    """ Coordinates of a square """
     def area(self):
         area = self.__size
         return area * area
 
-    """ Access and update private attribute """
+    """ Coordinates of a square """
     def size(self):
         return self.__size
 
-    """ Access and update private attribute
+    """ Coordinates of a square
     args: value - of integer value and is bigger or equal to 0 """
     def size(self, value):
         if type(value) is not int:
@@ -41,7 +41,8 @@ class Square:
     def __str__(self):
         self.my_print()
 
-
+    """ Coordinates of a square
+    args: value - of integer value and is bigger or equal to 0 """
     def position(self, value):
         if not type(value) is not tuple:
             raise TypeError('position must be a tuple of 2 positive integers')
@@ -51,7 +52,7 @@ class Square:
             raise TypeError('position must be a tuple of 2 positive integers')
         self.__position = value
 
-
+    """ Coordinates of a square """
     def pos_print(self):
         pos = ""
         if self.size == 0:
