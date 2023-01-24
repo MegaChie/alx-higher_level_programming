@@ -25,7 +25,7 @@ class Square:
     """ Access and update private attribute
     args: value - of integer value and is bigger or equal to 0"""
     def size(self, value):
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
@@ -33,9 +33,7 @@ class Square:
             self.__size = value
     """ Access and update private attribute """
     def my_print(self):
-        printer = self.__size
-        if printer == 0:
+        if self.__size == 0:
             print()
-        else:
-            for printed in range(printer):
-                print('#' * printed)
+        for i in range(self.__size):
+            print("#" * self.__size)
