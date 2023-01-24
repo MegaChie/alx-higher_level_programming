@@ -33,7 +33,8 @@ class Square:
             self.__size = value
     """ Access and update private attribute """
     def my_print(self):
-        if self.__size == 0:
+        printer = self.__size
+        if printer == 0:
             print()
-        for i in range(self.__size):
-            print("#" * self.__size)
+        for printed in range(printer):
+            print('#' * printed)
