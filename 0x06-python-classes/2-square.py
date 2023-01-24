@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+""" Defines a square """
+
+
 class Square:
+    """ Size validation
+    args: size - of integer value
+    """
     def __init__(self, size=0):
         if type(size) != int:
             raise TypeError("size must be an integer")
