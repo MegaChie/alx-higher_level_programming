@@ -3,16 +3,6 @@
 
 
 class Square:
-    """ Access and update private attribute
-    args: size - of integer value and is bigger or equal to 0 """
-    def __init__(self, size=0):
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
-
     """ Access and update private attribute """
     def area(self):
         area = self.__size
@@ -58,7 +48,7 @@ class Square:
             if type(place) is not int or place < 0:
                 raise TypeError(text)
         self.__position = value
-        
+
     """ Coordinates of a square
     args: value - of integer value and is tuple and bigger than 0
           position - tuple representing x and y coordinates """
