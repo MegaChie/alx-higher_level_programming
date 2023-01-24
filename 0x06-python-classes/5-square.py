@@ -16,7 +16,7 @@ class Square:
     """ Access and update private attribute """
     def area(self):
         area = self.__size
-        return area ** 2
+        return area * area
 
     """ Access and update private attribute """
     def size(self):
@@ -25,7 +25,7 @@ class Square:
     """ Access and update private attribute
     args: value - of integer value and is bigger or equal to 0"""
     def size(self, value):
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
