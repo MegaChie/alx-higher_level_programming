@@ -96,6 +96,6 @@ class Rectangle:
     Args: clc - instance of Rectangle class
           size - intger value """
     def square(cls, size=0):
-        height = size
+        heigth = size
         width = size
-        return cls(height, width)
+        return cls(heigth, width)
