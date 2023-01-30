@@ -66,7 +66,7 @@ class Rectangle:
     def __repr__(self):
         first = str(self.__width)
         second = str(self.__height)
-        result = "Rectangle("+ first +", "+ second +")"
+        result = "Rectangle(" + first + ", " + second + ")"
         return result
 
     """ Detect instance deletion. """
