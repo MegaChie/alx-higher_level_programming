@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ More Classes and Objects  """
 
+
 class Rectangle:
     """  String representation. """
     @property
