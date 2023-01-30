@@ -95,6 +95,7 @@ class Rectangle:
     """ A square is a rectangle.
     Args: clc - instance of Rectangle class
           size - intger value """
+    @classmethod
     def square(cls, size=0):
         height = size
         width = size
