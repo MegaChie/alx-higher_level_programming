@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ More Classes and Objects """
 
-
+number_of_instances = 0
 class Rectangle:
     """ How many instances. """
     @property
