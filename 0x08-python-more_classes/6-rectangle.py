@@ -74,4 +74,4 @@ class Rectangle:
     """ How many instances. """
     def __del__(self):
         print("Bye rectangle...")
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
