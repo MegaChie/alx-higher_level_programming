@@ -1,48 +1,40 @@
 #!/usr/bin/python3
-"""
-A rectangle with width and height.
-"""
+""" Rectangle class  """
 
 
 class Rectangle:
-    """
-    Rectangle functions and data
-    """
-
-    def __init__(self, width=0, height=0):
-        """ Instantiation
-        """
-        self.width = width
-        self.height = height
-
+    """  Real definition of a rectangle. """
     @property
     def width(self):
-        """ Getter for width
-        """
         return self.__width
 
+    """ Real definition of a rectangle.
+    args: value - of integer  type """
     @width.setter
     def width(self, value):
-        """ Setter for width
-        """
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-
+    
+    """ Real definition of a rectangle. """
     @property
     def height(self):
-        """ Getter for height
-        """
         return self.__height
 
+    """ Real definition of a rectangle. """
     @height.setter
     def height(self, value):
-        """ Setter for height
-        """
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    """ Real definition of a rectangle.
+    Args: width - of integer type
+          height - of integer type """
+    def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
