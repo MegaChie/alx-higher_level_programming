@@ -5,6 +5,7 @@
 class Rectangle:
     """ How many instances. """
     number_of_instances = 0
+
     @property
     def width(self):
         return self.__width
