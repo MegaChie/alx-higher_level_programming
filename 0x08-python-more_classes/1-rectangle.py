@@ -3,6 +3,12 @@
 
 
 class Rectangle:
+    """ Real definition of a rectangle.
+    Args: width - of integer type
+          height - of integer type """
+    def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
     """  Real definition of a rectangle. """
     @property
     def width(self):
@@ -32,9 +38,4 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    """ Real definition of a rectangle.
-    Args: width - of integer type
-          height - of integer type """
-    def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+
