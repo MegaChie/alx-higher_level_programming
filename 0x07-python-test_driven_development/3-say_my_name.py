@@ -3,7 +3,7 @@
 
 
 def say_my_name(first_name, last_name=""):
-    """  prints an introduction of person using given input.
+    """ prints an introduction of person using given input.
     check if both inputs are of string type """
     if type(first_name) is not str:
         raise TypeError("first_name must be a string")
