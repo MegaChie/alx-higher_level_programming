@@ -23,6 +23,6 @@ def matrix_divided(matrix, div):
             if not isinstance(element, (int, float)):
                 raise TypeError(text1)
             else:
-                divResult.append(round(element / div , 2))
+                divResult.append(round(element / div, 2))
         result.append(divResult)
     return result
