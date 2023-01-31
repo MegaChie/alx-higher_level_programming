@@ -2,28 +2,28 @@ Using ``print_square``
 -----------------------
 
 First import:
-	>>> print_square = __import__('4-print_square').print_square
+    >>> print_square = __import__('4-print_square').print_square
 
 Input not a number:
-	>>> print_square('h')
-	Traceback (most recent call last):
-	...
-	TypeError: size must be an integer
+    >>> print_square('h')
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
 
 Float/negative input type:
-	>>> print_square(-1.5)
-	Traceback (most recent call last):
-	...
-	TypeError: size must be an integer
+    >>> print_square(-1.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
 
 No input:
-	>>> print_square()
-	Traceback (most recent call last):
-	...
-	TypeError: print_square() missing 1 required positional argument: 'size'
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
 
 Negative input:
-	>>> print_square(-1)
-	Traceback (most recent call last):
-	...
-	ValueError: size must be >= 0
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
