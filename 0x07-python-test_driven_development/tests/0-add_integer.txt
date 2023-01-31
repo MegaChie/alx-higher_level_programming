@@ -2,42 +2,42 @@ Using ``add_integer``
 ----------------------
 
 First import user defined function:
-	>>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
 
 Add positive numbers:
-	>>> add_integer(2, 4)
-	6
+    >>> add_integer(2, 4)
+    6
 
 Add positive and negative numbers:
-	>>> add_integer(10, -2)
-	8
+    >>> add_integer(10, -2)
+    8
 
 Add one number:
-	>>> add_integer(5)
-	103
+    >>> add_integer(5)
+    103
 
 add number and string:
-	>>> add_integer(2, "porn")
-	Traceback (most recent call last):
-	...
-	TypeError: b must be an integer
+    >>> add_integer(2, "porn")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
 
 Add negative number and fraction:
-	>>> add_intege(100.3, -2)
-	98
+    >>> add_intege(100.3, -2)
+    98
 
 Add one float:
-	>>> add_integer(1500.5)
-	1598
+    >>> add_integer(1500.5)
+    1598
 
 No input:
-	>>> add_integer(None)
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
 
 Add two strings:
-	>>> add_integer("fuck", "you")
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
+    >>> add_integer("fuck", "you")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
