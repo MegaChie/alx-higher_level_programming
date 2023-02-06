@@ -1,0 +1,9 @@
+Using ``MyList``
+-----------------
+
+First import user defined function:
+    >>> MyList = __import__('1-my_list').MyList
+
+case one:
+	>>> my_list.print_sorted()
+    [-1, 0, 3, 4]
