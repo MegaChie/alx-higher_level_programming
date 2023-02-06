@@ -8,4 +8,5 @@ def add_attribute(a_class, name, value):
 
     if type(a_class) in cannot_add:
         raise TypeError("can't add new attribute")
+
     a_class.__setattr__(name, value)
