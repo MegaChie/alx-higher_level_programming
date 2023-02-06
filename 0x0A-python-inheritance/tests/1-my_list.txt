@@ -1,26 +1,36 @@
-Using ``MyList``
------------------
+Using class ``MyList``
+-----------------------
 
-First import user defined function:
-	>>> MyList = __import__('1-my_list').MyList
+Class MyList can store a list
+Has a function print_sorted to print the list in MyList sorted
 
-case one:
-	>>> my_list.print_sorted()
-	[-1, 0, 3, 4]
+First import class ``MyList``
 
-Case two:
-	>>> my_list.print_sorted()
-	[-1, 0, 3, 4]
+    >>> MyList = __import__('1-my_list').MyList
 
-case three:
-	>>> my_list = MyList()
-	>>> my_list.append(999999999999)
-	>>> my_list.append(-1)
-	>>> my_list.append(0)
-	>>> print(my_list)
-	[999999999999, -1, 0]
+Now use it:
 
-case four:
-	>>> my_list.print_sorted()
-	[-1, 0, 999999999999]
-	
+Basic MyList usage (pos, neg, zero):
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(4)
+    >>> my_list.append(3)
+    >>> my_list.append(0)
+    >>> print(my_list)
+    [-1, 4, 3, 0]
+
+Basic print_sorted usage:
+    >>> my_list.print_sorted()
+    [-1, 0, 3, 4]
+
+Big int MyList usage:
+    >>> my_list = MyList()
+    >>> my_list.append(999999999999)
+    >>> my_list.append(-1)
+    >>> my_list.append(0)
+    >>> print(my_list)
+    [999999999999, -1, 0]
+
+Big int print_sorted usage:
+    >>> my_list.print_sorted()
+    [-1, 0, 999999999999]
