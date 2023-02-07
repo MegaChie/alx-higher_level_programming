@@ -9,7 +9,6 @@ try:
     loadFile = load_from_json_file("add_item.json")
 except FileNotFoundError:
     loadFile = []
-
 argc = len(sys.argv)
 for idx in range(1, argc):
     loadFile.append(sys.argv[idx])
