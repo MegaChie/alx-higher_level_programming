@@ -9,7 +9,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """ Student to JSON """
         if attrs == None or type(attrs) != list:
             return self.__dict__
