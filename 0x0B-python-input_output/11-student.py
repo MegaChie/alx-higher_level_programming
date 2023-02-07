@@ -24,4 +24,5 @@ class Student:
 
     def reload_from_json(self, json):
         """ Student to disk and reload """
-        self.__dict__[items] = json[items]
+        for items in json.keys():
+            self.__dict__[items] = json[items]
