@@ -77,14 +77,19 @@ class Rectangle(Base):
                                                 self.id, self.__x, self.__y,
                                                 self.__width, self.__height)
         
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Update #0 """
-        if len(args) != 0:
+        if len(kwargs) != 0:
+            for keys, values in kwargs.items():
+                setattr(self, keys, values)
+        elif len(args) != 0:
             try:
                 self.id = args[0]
                 self.__width = args[1]
-                self.__height = args[2] 
+                self.__height = args[2]
                 self.__x = args[3]
                 self.__y = args[4]
             except IndexError:
                 pass
+        else:
+            print()
