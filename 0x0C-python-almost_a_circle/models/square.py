@@ -17,6 +17,27 @@ class Square(Rectangle):
         self.height = value
 
     def __str__(self):
+        """ Square size """
         return "[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
-                                             self.id, self.x, self.y,
-                                             self.width)
+                                                 self.id, self.x, self.y,
+                                                 self.width)
+    
+    def update(self, *args, **kwargs):
+        """ Square update """
+        if len(kwargs) != 0:
+            for keys, values in kwargs.items():
+                setattr(self, keys, values)
+        elif len(args) != 0:
+            try:
+                self.id = args[0]
+                self.size = args[1]
+                self.x = args[2]
+                self.y = args[3]
+            except IndexError:
+                pass
+        else:
+            print()
+
+    def to_dictionary(self):
+        """ Rectangle instance to dictionary representation """
+        return {'id': self.id, 'size': self.width, 'x': self.x, 'y': self.y}
