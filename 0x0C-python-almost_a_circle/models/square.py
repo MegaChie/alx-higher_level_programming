@@ -2,6 +2,9 @@
 """ 0x0C. Python - Almost a circle """
 
 
+from models.rectangle import Rectangle
+
+
 class Square(Rectangle):
     """ And now, the Square! """
     def __init__(self, size, x=0, y=0, id=None):
@@ -39,5 +42,5 @@ class Square(Rectangle):
             print()
 
     def to_dictionary(self):
-        """ Rectangle instance to dictionary representation """
+        """ Rectangle instance to dictionary represultentation """
         return {'id': self.id, 'size': self.width, 'x': self.x, 'y': self.y}
