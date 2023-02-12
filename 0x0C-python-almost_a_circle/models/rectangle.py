@@ -2,6 +2,9 @@
 """ 0x0C. Python - Almost a circle """
 
 
+from models.base import Base
+
+
 class Rectangle(Base):
     """ First Rectangle """
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -95,6 +98,6 @@ class Rectangle(Base):
             print()
 
     def to_dictionary(self):
-        """ Rectangle instance to dictionary representation """
+        """ Rectangle instance to dictionary represultentation """
         return {'id': self.id, 'width': self.__width, 'height': self.__height,
                 'x': self.__x, 'y': self.__y}
