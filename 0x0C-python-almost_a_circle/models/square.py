@@ -22,9 +22,9 @@ class Square(Rectangle):
     def __str__(self):
         """ Square size """
         return "[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
-                                                 self.id, self.x, self.y,
-                                                 self.width)
-    
+                                             self.id, self.x, self.y,
+                                             self.width)
+
     def update(self, *args, **kwargs):
         """ Square update """
         if len(kwargs) != 0:
