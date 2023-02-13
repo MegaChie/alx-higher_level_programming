@@ -61,3 +61,17 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ JSON ok, but CSV? """
+        result = []
+        resultDict = {}
+        with open(cls.__name__ + ".csv", mode="r") as read_file:
+            read_from = csv.DictReader(read_file)
+            for item in read_from:
+                for k, v in dict(item).items():
+                    resultDict[k] = int(v)
+                # formatting with create()
+                result.append(cls.create(**resultDict))
+        return result
