@@ -55,9 +55,22 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ File to instances """
+        # try:
+        #     with open(cls.__name__ + ".json", 'r', encoding="utf-8") as jsonfile:
+        #         list_dicts = Base.from_json_string(jsonfile.read())
+        #         return [cls.create(**d) for d in list_dicts]
+        # except IOError:
+        #     return []
+        result = []
+        with open(cls.__name__ + ".json", 'r', encoding="utf-8") as readFile:
+            text = readFile.read()
+        text = cls.from_json_string(text)
         try:
-            with open(cls.__name__ + ".json", 'r', encoding="utf-8") as jsonfile:
-                list_dicts = Base.from_json_string(jsonfile.read())
-                return [cls.create(**d) for d in list_dicts]
+            for item in text:
+            if type(item) == dict:
+                result.append(cls.create(**item))
+            else:
+                result.append(item)
+            return result
         except IOError:
             return []
