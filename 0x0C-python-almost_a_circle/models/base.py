@@ -45,24 +45,20 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ Dictionary to Instance """
-        if dictionary and dictionary != {}:
-            if cls.__name__ == "Rectangle":
-                new = cls(1, 1)
-            else:
-                new = cls(1)
-            new.update(**dictionary)
-            return new
+        if cls.__name__ == "Rectangle":
+            temp = cls(1, 1)
+        if cls.__name__ == "Square":
+            temp = cls(1)
+        temp.update(**dictionary)
+        return temp
 
     @classmethod
     def load_from_file(cls):
         """ File to instances """
-        result = []
-        with open(cls.__name__ + ".json", 'r', encoding="utf-8") as readFile:
-            text = readFile.read()
-        text = cls.from_json_string(text)
-        for item in text:
-            if type(item) == dict:
-                result.append(cls.create(**item))
-            else:
-                result.append(item)
-        return result
+        filename = str(cls.__name__) + ".json"
+        try:
+            with open(filename, "r") as jsonfile:
+                list_dicts = Base.from_json_string(jsonfile.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []
