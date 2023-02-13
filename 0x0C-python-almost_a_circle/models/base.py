@@ -8,7 +8,7 @@ import json
 class Base:
     """ Base class """
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         if id is not None:
             self.id = id
@@ -33,7 +33,6 @@ class Base:
             else:
                 fileWrite.write(cls.to_json_string([item.to_dictionary()
                                                     for item in list_objs]))
-    
     @staticmethod
     def from_json_string(json_string):
         """ JSON string to dictionary """
