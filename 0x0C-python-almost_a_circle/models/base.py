@@ -73,4 +73,4 @@ class Base:
                 result.append(item)
             return result
         except IOError:
-            return []
+            pass
