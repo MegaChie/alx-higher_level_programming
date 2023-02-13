@@ -66,13 +66,15 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         """ JSON ok, but CSV? """
-        result = []
-        resultDict = {}
-        with open(cls.__name__ + ".csv", mode="r") as read_file:
-            read_from = csv.DictReader(read_file)
-            for item in read_from:
-                for k, v in dict(item).items():
-                    resultDict[k] = int(v)
-                # formatting with create()
-                result.append(cls.create(**resultDict))
-        return result
+        try:
+            with open(cls.__name__ + ".csv", "r", newline="") as csvfile:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
+                list_dicts = [dict([k, int(v)] for k, v in d.items())
+                              for d in list_dicts]
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []
