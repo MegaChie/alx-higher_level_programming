@@ -27,7 +27,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """ JSON string to file """
-        with open(cls.__name__ + ".json", 'w') as fileWrite:
+        with open(cls.__name__ + ".json", mode="w", encoding="utf-8") as fileWrite:
             if list_objs is None:
                 fileWrite.write("[]")
             else:
@@ -56,7 +56,7 @@ class Base:
     def load_from_file(cls):
         """ File to instances """
         result = []
-        with open(cls.__name__ + ".json", 'r') as readFile:
+        with open(cls.__name__ + ".json", mode="r", encoding="utf-8") as readFile:
             text = readFile.read()
         text = cls.from_json_string(text)
         for item in text:
