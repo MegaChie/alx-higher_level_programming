@@ -67,7 +67,7 @@ class Base:
     def load_from_file_csv(cls):
         """ JSON ok, but CSV? """
         try:
-            with open(cls.__name__ + ".csv", "r", newline="") as csvfile:
+            with open(cls.__name__ + ".csv", "r", newline="", encoding="utf-8") as csvfile:
                 if cls.__name__ == "Rectangle":
                     fieldnames = ["id", "width", "height", "x", "y"]
                 else:
