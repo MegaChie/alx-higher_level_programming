@@ -33,6 +33,7 @@ class Base:
             else:
                 fileWrite.write(cls.to_json_string([item.to_dictionary()
                                                     for item in list_objs]))
+
     @staticmethod
     def from_json_string(json_string):
         """ JSON string to dictionary """
