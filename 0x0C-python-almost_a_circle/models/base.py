@@ -56,8 +56,8 @@ class Base:
     def load_from_file(cls):
         """ File to instances """
         try:
-            with open(cls.__name__ + ".json", 'r', encoding="utf-8") as jsonfile:
-                list_dicts = Base.from_json_string(jsonfile.read())
+            with open(cls.__name__ + ".json", 'r', encoding="utf-8") as jfile:
+                list_dicts = Base.from_json_string(jfile.read())
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
