@@ -61,16 +61,17 @@ class Base:
         #         return [cls.create(**d) for d in list_dicts]
         # except IOError:
         #     return []
-        result = []
-        with open(cls.__name__ + ".json", 'r', encoding="utf-8") as readFile:
-            text = readFile.read()
-        text = cls.from_json_string(text)
         try:
-            for item in text:
-            if type(item) == dict:
-                result.append(cls.create(**item))
-            else:
-                result.append(item)
-            return result
+            result = []
+            with open(cls.__name__ + ".json", 'r', encoding="utf-8") as readFile:
+                text = readFile.read()
+            text = cls.from_json_string(text)
+            try:
+                for item in text:
+                if type(item) == dict:
+                    result.append(cls.create(**item))
+                else:
+                    result.append(item)
+                return result
         except IOError:
-            pass
+            return []
