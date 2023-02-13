@@ -3,7 +3,7 @@
 
 
 import json
-import scv
+import csv
 
 
 class Base:
