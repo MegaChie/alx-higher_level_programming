@@ -1,3 +1,2 @@
 -- comment text
-CREATE TABLE hbtn_0c_0 (
-name  CHAR);
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
