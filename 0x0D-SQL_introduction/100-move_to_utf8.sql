@@ -1,2 +1,2 @@
 -- comment text
-ALTER DATABASE hbtn_0c_0 CHARACTER SET utf8;
+alter table first_table change name name VARCHAR(256) character set utf8;
