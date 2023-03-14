@@ -1,2 +1,2 @@
 -- comment text
-SHOW DATABASES;
+SHOW $1;
