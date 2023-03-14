@@ -1,3 +1,4 @@
 -- comment text
-INSERT INTO first_table VALUES (id, 89);
-INSERT INTO first_table VALUES (name, 'Best School');
+INSERT INTO first_table
+VALUES
+(89, 'Best School');
