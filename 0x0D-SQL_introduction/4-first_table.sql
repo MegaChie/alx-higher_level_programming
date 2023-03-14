@@ -1,4 +1,4 @@
 -- comment text
 CREATE TABLE first_table (
 id INT,
-name VARCHAR);
+name VARCHAR(256));
