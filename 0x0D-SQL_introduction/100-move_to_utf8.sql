@@ -1,2 +1,3 @@
 -- comment text
-ALTER TABLE first_table CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+ALTER TABLE hbtn_0c_0.first_table 
+ALTER COLUMN name COLLATE UTF8
