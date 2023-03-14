@@ -1,2 +1,2 @@
 -- comment text
-SHOW $1;
+SHOW TABLES;
