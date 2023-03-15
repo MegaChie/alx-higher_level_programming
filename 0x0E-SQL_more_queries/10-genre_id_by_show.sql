@@ -1,4 +1,4 @@
--- lists all shows contained in hbtn_0d_tvshows
+-- comment text
 SELECT a.title, b.genre_id
 FROM tv_shows a, tv_show_genres b
 WHERE b.show_id = a.id
