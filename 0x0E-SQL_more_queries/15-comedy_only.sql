@@ -1,4 +1,4 @@
--- lists all Comedy shows in the database hbtn_0d_tvshows
+-- comment text
 SELECT a.title
 FROM tv_shows a
 JOIN tv_show_genres b
