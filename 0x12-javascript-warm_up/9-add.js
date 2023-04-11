@@ -5,3 +5,4 @@ const b = process.argv[3]
 function add(a, b) {
   console.log(process.argv[2] + process.argv[3]);
 }
+add (a, b);
