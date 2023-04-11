@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // comment text
-let num = Number(process.argv[2]);
+const num = Number(process.argv[2]);
 
 if (num) {
   for (let i = 0; i < num; i++) {
