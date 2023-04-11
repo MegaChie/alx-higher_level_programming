@@ -8,4 +8,4 @@ function factorial (x) {
   }
 }
 const pass = Number(process.argv[2]);
-factorial(pass);
+console.log(factorial(pass));
