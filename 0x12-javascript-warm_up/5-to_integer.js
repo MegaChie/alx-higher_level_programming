@@ -1,5 +1,8 @@
 #!/usr/bin/node
 // comment text
 let holder = process.argv[2];
-console.log(typeof(holder));
-console.log(holder + 6);
+if (typeof(holder) == number) {
+  console.log(holder);
+} else {
+  console.log('Not a number');
+}
