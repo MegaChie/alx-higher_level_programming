@@ -1,9 +1,9 @@
 #!/usr/bin/node
 // comment text
-if (arguments.length == 0){
+if (process.argv.length === 2){
 	console.log('No argument');
-} else if (arguments.length == 1){
+} else if (process.argv.length === 3){
 	console.log('Argument found');
-} else if (arguments.length > 1){
+} else {
 	console.log('Arguments found');
 }
