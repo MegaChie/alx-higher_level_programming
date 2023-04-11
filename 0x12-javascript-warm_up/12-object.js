@@ -1,16 +1,9 @@
 #!/usr/bin/node
 // comment text
-function sortNumber (a, b) {
-  return a - b;
-}
-const argsLen = process.argv.length;
-if (argsLen === 2 || argsLen === 3) {
-  console.log('0');
-} else {
-  const arr = [];
-  for (let i = 2; i < argsLen; i++) {
-    arr.push(process.argv[i]);
-  }
-  arr.sort(sortNumber);
-  console.log(arr[arr.length - 2]);
-}
+const myObject = {
+  type: 'object',
+  value: 12
+};
+console.log(myObject);
+myObject.value = 89;
+console.log(myObject);
