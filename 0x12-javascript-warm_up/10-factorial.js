@@ -2,10 +2,10 @@
 // comment text
 function factorial (x) {
   if (x == 0) {
-        return 1;
+        console.log('1');
     }
     else {
-        return x * factorial(x - 1);
+        console.log(x * factorial(x - 1));
     }
 }
 let pass = Number(process.argv[2]);
