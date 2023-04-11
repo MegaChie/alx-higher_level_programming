@@ -1,9 +1,12 @@
 #!/usr/bin/node
 // comment text
-function factorial (a){
-  let fact = Number(a);
-  if (fact === NaN) {
-    console.log(fact);
-    console.log('1');
-  }
+function factorial (x) {
+  if (x == 0) {
+        return 1;
+    }
+    else {
+        return x * factorial(x - 1);
+    }
 }
+let pass = Number(process.argv[2]);
+factorial(pass);
