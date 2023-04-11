@@ -1,10 +1,10 @@
 #!/usr/bin/node
 // comment text
 function factorial (x) {
-  if (isNaN(x) === true || x <= 0) {
-    console.log('1');
+  if (isNaN(num) || num <= 1) {
+    return 1;
   } else {
-    console.log(x * factorial(x - 1));
+    return num * factorial(num - 1);
   }
 }
 const pass = Number(process.argv[2]);
