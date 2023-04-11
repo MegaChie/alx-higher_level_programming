@@ -1,5 +1,5 @@
 #!/usr/bin/node
 // comment text
 function add(a, b) {
-  console.log(process.argv[2] + process.argv[3]);
+  return (console.log(process.argv[2] + process.argv[3]);)
 }
