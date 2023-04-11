@@ -2,6 +2,6 @@
 // comment text
 if (isNaN(process.argv[2]) == 'true') {
   console.log('Not a number');
-} else (isNaN(process.argv[2]) == 'false') {
+} else {
   console.log('My number: ' + process.argv[2]);
 }
