@@ -1,8 +1,9 @@
 #!/usr/bin/node
 // comment text
-const a = Number(process.argv[2]);
-const b = Number(process.argv[3]);
-function add (a, b) {
-  console.log(a + b);
+let arr = [0]
+for (let i = 0, j = 2; i < process.argv.length; i++) {
+  arr[i] = process.argv[j];
+  j++;
 }
-add(a, b);
+arr.sort();
+console.log(arr.slice(-2));
