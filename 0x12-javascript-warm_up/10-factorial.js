@@ -1,8 +1,8 @@
 #!/usr/bin/node
 // comment text
-const a = Number(process.argv[2]);
-const b = Number(process.argv[3]);
-function add (a, b) {
-  console.log(a + b);
+function factorial (a){
+  let fact = Number(a);
+  if (fact === NaN) {
+    console.log('1');
+  }
 }
-add(a, b);
