@@ -1,6 +1,9 @@
 #!/usr/bin/node
 // comment text
-const list = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-for (let i = list.length - 1; i >= 0; i--) {
-  console.log(list[i]);
+if (isNaN(process.argv[2]) === true) {
+  console.log('Missing number of occurrences')
+} else {
+  for (let i = 0; i < Number(process.argv[2]); i++) {
+    console.log('C is fun');
+}
 }
