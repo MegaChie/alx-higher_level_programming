@@ -1,13 +1,15 @@
 #!/usr/bin/node
 // comment text
 let arr = [0]
+function sortNumber (a, b) {
+  return a - b;
+}
 if (process.argv.length == 2 || process.argv.length == 3) {
   console.log('0');
 } else {
-  for (let i = 0, j = 2; i < process.argv.length; i++) {
-    arr[i] = process.argv[j];
-    j++;
+  for (let i = 2; i < argsLen; i++) {
+    arr.push(process.argv[i]);
   }
-  arr.sort(function(a, b){return a - b});
+  arr.sort(sortNumber);
   console.log(arr.slice(-2));
 }
