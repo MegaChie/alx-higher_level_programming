@@ -1,5 +1,9 @@
 #!/usr/bin/node
 // comment text
-console.log('C is fun');
-console.log('Python is cool');
-console.log('JavaScript is amazing');
+if (arguments.length == 0){
+	console.log('No argument');
+} else if (arguments.length == 1){
+	console.log('Argument found');
+} else {
+	console.log('Arguments found');
+}
