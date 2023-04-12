@@ -1,5 +1,5 @@
 #!/usr/bin/node
 // comment text
 exports.add = function (a, b) {
-  console.log(Numeber(a) + Number(b));
+  return Numeber(a) + Number(b);
 };
