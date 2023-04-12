@@ -1,3 +1,3 @@
 #!/usr/bin/node
 // comment text
-const class Rectangle {};
+class const Rectangle {}
