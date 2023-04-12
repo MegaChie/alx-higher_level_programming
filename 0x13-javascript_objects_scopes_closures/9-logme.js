@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // comment text
+let n = 0;
 exports.logMe = function (item) {
-  let n = 0;
   console.log(n : ':' + item);
   n++;
 };
