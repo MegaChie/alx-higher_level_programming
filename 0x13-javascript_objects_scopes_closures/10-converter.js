@@ -1,6 +1,5 @@
 #!/usr/bin/node
 // comment text
-let n = 0;
 exports.converter = function (base) {
   if (process.argv[2] === 16) {
     console.log(parseInt(base, 16));
