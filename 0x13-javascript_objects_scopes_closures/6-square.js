@@ -1,11 +1,12 @@
 #!/usr/bin/node
 // comment text
-exports.nbOccurences = function (list, searchElement) {
-  let n = 0;
-  for (let i = 0; i < list.length; i++) {
-    if (list[i] === searchElement) {
-      n++;
+module.exports = class Square extends require('./5-square') {
+  charPrint (c) {
+    if (c === undefined) {
+      c = 'X';
+    }
+    for (let i = 0; i < this.height; i++) {
+      console.log(c.repeat(this.width));
     }
   }
-  return n;
 };
