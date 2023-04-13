@@ -20,5 +20,6 @@ def Fetch():
     else:
         return
 
+
 if __name__ == "__main__":
     get_states()
