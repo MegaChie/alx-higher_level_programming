@@ -28,5 +28,6 @@ def get_states():
     code.close()
     config.close()
 
+
 if __name__ == "__main__":
     get_states()
