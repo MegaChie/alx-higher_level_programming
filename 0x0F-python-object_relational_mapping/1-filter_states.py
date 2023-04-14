@@ -14,7 +14,7 @@ def get_states():
     cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id")
     rows = cur.fetchall()
     for lines in rows:
-        print(i)
+        print(lines)
 
     cur.close()
     db.close()
