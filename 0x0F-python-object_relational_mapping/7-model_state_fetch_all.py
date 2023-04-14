@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """ a script that lists all State objects from the database hbtn_0e_6_usa. """
-from sqlalchemy import create_engine
+import sqlalchemy
 from model_state import Base, State
 import sys
-from sqlalchemy.orm import Session
 
 
 def Fetch():
@@ -20,4 +19,4 @@ def Fetch():
 
 
 if __name__ == "__main__":
-    list_state_obj()
+    Fetch()
