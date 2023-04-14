@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ a script that lists all State objects from the database hbtn_0e_6_usa. """
-import SQLAlchemy
+import sqlalchemy
 from model_state import Base, State
 import sys
 import sqlalchemy.orm
@@ -13,9 +13,9 @@ def Fetch():
                            pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = Session(engine)
-    rows = session.query(State).all()
-    for i in rows:
-        print("{}: {}".format(i.__dict__['id'], i.__dict__['name']))
+    file = session.query(State).all()
+    for line in file:
+        print("{}: {}".format(line.__dict__['id'], line.__dict__['name']))
     session.close()
 
 
