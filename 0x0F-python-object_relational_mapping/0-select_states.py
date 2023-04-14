@@ -12,21 +12,21 @@ def get_states():
         argv[2]: mysql password
         argv[3]: database name
     """
-    config = MySQLdb.connect(host="localhost",
+    db = MySQLdb.connect(host="localhost",
                          port=3306,
                          user=sys.argv[1],
                          passwd=sys.argv[2],
-                         config=sys.argv[3])
+                         db=sys.argv[3])
 
-    code = config.cursor()
+    cur = db.cursor()
 
-    code.execute("SELECT * FROM states ORDER BY id ASC")
-    file = code.fetchall()
-    for i in file:
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cur.fetchall()
+    for i in rows:
         print(i)
 
-    code.close()
-    config.close()
+    cur.close()
+    db.close()
 
 
 if __name__ == "__main__":
