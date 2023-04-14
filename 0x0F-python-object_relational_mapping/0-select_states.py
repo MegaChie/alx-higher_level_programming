@@ -1,11 +1,17 @@
 #!/usr/bin/python3
-"""  lists all states from the database hbtn_0e_0_usa. """
+"""Script that lists all states from database hbtn_0e_0_usa"""
 import MySQLdb
 import sys
 
 
-def Fetch():
-    """ Get all states. """
+def get_states():
+    """Takes arguments argv to list from database
+
+    Arguments:
+        argv[1]: mysql username
+        argv[2]: mysql password
+        argv[3]: database name
+    """
     db = MySQLdb.connect(host="localhost",
                          port=3306,
                          user=sys.argv[1],
