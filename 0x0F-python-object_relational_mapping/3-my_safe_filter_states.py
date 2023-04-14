@@ -5,7 +5,7 @@ import MySQLdb
 import sys
 
 
-def Fetch():
+def get_states():
     """ 3. SQL Injection... """
     if len(sys.argv) == 5:
         db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
