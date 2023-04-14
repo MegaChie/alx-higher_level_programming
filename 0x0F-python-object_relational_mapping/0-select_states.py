@@ -12,9 +12,9 @@ def get_states():
     cur = db.cursor()
 
     cur.execute("SELECT * FROM states ORDER BY id ASC")
-    rows = cur.fetchall()
-    for i in rows:
-        print(i)
+    file = cur.fetchall()
+    for lines in file:
+        print(lines)
 
     cur.close()
     db.close()
