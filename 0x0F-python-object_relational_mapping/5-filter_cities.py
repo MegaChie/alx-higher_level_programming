@@ -17,9 +17,8 @@ def Fetch():
                     ORDER BY cities.id ASC".format(sys.argv[4]))
         file = cur.fetchall()
         result = []
-        for place in rows:
+        for place in file:
             result.append(place[0])
-
         print(", ".join(result))
         cur.close()
         db.close()
