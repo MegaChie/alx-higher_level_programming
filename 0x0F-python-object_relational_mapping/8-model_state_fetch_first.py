@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ List first State objects from db. """
 import sys
-import sqlalchemy
-import sqlalchemy.orm
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
 from model_state import Base, State
 
 
@@ -21,4 +21,4 @@ def Fetch():
 
 
 if __name__ == "__main__":
-    list_first_state_obj()
+    Fetch()
