@@ -21,5 +21,6 @@ def Fetch():
     session.commit()
     session.close()
 
+
 if __name__ == "__main__":
     Fetch()
