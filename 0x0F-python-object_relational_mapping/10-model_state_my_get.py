@@ -8,6 +8,7 @@ from model_state import Base, State
 
 
 def Fetch():
+    """ 10. Get a state. """
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
