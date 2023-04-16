@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-def Fetch():
+if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
                            format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
@@ -22,6 +22,3 @@ def Fetch():
         for city in state.cities:
             print("    {}: {}".format(city.id, city.name))
 
-
-if __name__ == '__main__':
-	Fetch()
