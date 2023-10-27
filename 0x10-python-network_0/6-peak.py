@@ -3,7 +3,7 @@
 def find_peak(list_of_integers):
 	temp = list(list_of_integers)
 	number = 0
-	while number != len(temp) - 1:
+	while number != len(temp):
 		if number == 0:
 			if temp[number] > temp[number + 1]:
 				print(temp[number])
@@ -14,4 +14,4 @@ def find_peak(list_of_integers):
 			if ((temp[number] > temp[number + 1]) and
 				(temp[number] > temp[number - 1])):
 				print(temp[number])
-		number = +1
+		number = number + 1
