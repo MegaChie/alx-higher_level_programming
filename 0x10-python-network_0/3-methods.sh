@@ -1,3 +1,3 @@
 #!/bin/bash
 # comment text
-curl -s OPTIONS  "$1"
+curl -sI OPTIONS  "$1"
