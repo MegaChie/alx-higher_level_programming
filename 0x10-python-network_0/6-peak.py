@@ -3,4 +3,5 @@
 def find_peak(list_of_integers):
 	temp = list(list_of_integers)
 	number = 0
-	print(typeof(temp))
+	print(type(temp))
+	print(type(number))
