@@ -1,3 +1,3 @@
 #!/bin/bash
 # comment text
-curl -I "$1"
+curl -sXI "$1"
