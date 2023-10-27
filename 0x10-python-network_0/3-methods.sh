@@ -1,3 +1,3 @@
 #!/bin/bash
 # comment text
-curl -X DELETE "$1"
+curl -siLX OPTIONS "$1"
