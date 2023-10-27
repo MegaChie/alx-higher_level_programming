@@ -2,13 +2,14 @@
 """ Find a peak """
 def find_peak(list_of_integers):
 	temp = list(list_of_integers)
-	for place in range(len(temp)):
-		if (place == 0):
-			if temp[place] > temp[place + 1]:
-				print (temp[place])
-		elif place == len(temp) - 1:
-			if temp[place] > temp[place - 1]:
-				print (temp[place])
+	for number in range(len(temp)):
+		if number == 0:
+			if temp[number] > temp[number + 1]:
+				print(temp[number])
+		elif number == len(temp) - 1:
+			if temp[number] > temp[number - 1]:
+				print(temp[number])
 		else:
-			if ((temp[place] > temp[place - 1]) and (temp[place] > temp[place + 1])):
-				print (temp[place])
+			if ((temp[number] > temp[number + 1]) and
+				(temp[number] > temp[number - 1])):
+				print(temp[number])
