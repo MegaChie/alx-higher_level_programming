@@ -1,3 +1,3 @@
 #!/bin/bash
 # comment text
-curl -sX DELETE "$1"
+curl -sI "$1"
