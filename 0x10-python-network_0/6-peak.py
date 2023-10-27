@@ -14,4 +14,4 @@ def find_peak(list_of_integers):
 			if ((temp[number] > temp[number + 1]) and
 				(temp[number] > temp[number - 1])):
 				print(temp[number])
-		number++
+		number = +1
