@@ -8,7 +8,7 @@ def find_peak(list_of_integers):
 				print (temp[place])
 		elif place == len(temp) - 1:
 			if temp[place] > temp[place - 1]:
-			print (temp[place])
+				print (temp[place])
 		else:
 			if ((temp[place] > temp[place - 1]) and (temp[place] > temp[place + 1])):
 				print (temp[place])
