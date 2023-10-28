@@ -1,3 +1,3 @@
 #!/bin/bash
 # comment text
-curl -sd @$2 "$1"
+curl -sH "Content-Type: application/json" --data "@$2" "$1"
