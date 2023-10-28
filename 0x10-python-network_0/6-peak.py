@@ -6,8 +6,7 @@ def find_peak(list_of_integers):
 		tmp = (list_of_integers)
 	elif i > 6:
 		tmp = list_of_integers[0:6]
-	for n in range(0, len(tmp)):
-		if tmp[n] > tmp[n + 1]:
-			if tmp[n] > tmp[n - 1]:
+	for n in tmp:
+		if n > tmp[index(n) + 1]:
+			if n > tmp[index(n) - 1]:
 				print(tmp[n])
-				pass
