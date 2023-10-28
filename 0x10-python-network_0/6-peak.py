@@ -10,3 +10,4 @@ def find_peak(list_of_integers):
 		if tmp[n] > tmp[n + 1]:
 			if tmp[n] > tmp[n - 1]:
 				print(tmp[n])
+				pass
