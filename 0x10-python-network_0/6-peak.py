@@ -2,4 +2,5 @@
 """ Find a peak """
 def find_peak(list_of_integers):
 	n = len(list_of_integers)
-	print(n)
+	tmp = list_of_integers.sort()
+	print(tmp[-1])
