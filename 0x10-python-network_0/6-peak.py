@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Find a peak """
 def find_peak(list_of_integers):
-	i = len(tmp)
+	i = len(list_of_integers)
 	if i <= 5:
 		tmp = list(list_of_integers)
 	elif i > 5:
