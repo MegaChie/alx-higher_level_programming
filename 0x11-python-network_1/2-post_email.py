@@ -9,15 +9,12 @@ import sys
 
 def program():
     """Comment text"""
+    data = urllib.parse.urlencode({"a_key": sys.argv[2]})
+    data = data.encode('ascii')
     url = sys.argv[1]
-    value = {
-    "email":sys.argv[2]
-    }
-    string = urllib.parse.urlencode(value)
-    data = string.encode("ascii")
+    response = urllib.request.urlopen(url, data)
     with urllib.request.urlopen(url, data) as response:
-        text = response.read()
-        print(text)
+        print(response.info())
         
 
 
