@@ -10,7 +10,7 @@ import sys
 def program():
     """Comment text"""
     url = sys.argv[1]
-    value{
+    value = {
     "email":sys.argv[2]
     }
     string = urllib.parse.urlencode(value)
