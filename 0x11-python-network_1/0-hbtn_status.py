@@ -1,11 +1,11 @@
 #!/usr/bin/python3
+#comment text
 
 
-import shutil
-import tempfile
 import urllib.request
-with urllib.request.urlopen('http://python.org/') as response:
-	with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
-		shutil.copyfileobj(response, tmp_file)
-with open("tmp_file.name", "r") as html:
-	print (html.read())
+with urllib.request.urlopen("https://intranet.hbtn.io/status") as response:
+	html = response.read()
+	print("Body response:")
+	print("\t- type: {}".format(type(html)))
+	print("\t- content: {}".format(html))
+	print("\t- utf8 content: {}".format(html.decode("utf-8")))
