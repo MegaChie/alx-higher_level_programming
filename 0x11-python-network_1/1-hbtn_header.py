@@ -8,8 +8,7 @@ import sys
 def execute():
     """Comment text"""
     with urllib.request.urlopen(sys.argv[1]) as response:
-        value = response.read()
-        print(value.getheader('X-Request-Id'))
+        print(response.getheader('X-Request-Id'))
 
 if __name__ == "__main__":
     execute()
