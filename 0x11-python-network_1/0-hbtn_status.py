@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 
 
+import shutil
+import tempfile
 import urllib.request
-req = urllib.request.Request('https://alx-intranet.hbtn.io/status')
-with urllib.request.urlopen(req) as response:
-	the_page = response.read()
-for line in the_page:
-	print(line)
+	with urllib.request.urlopen('http://python.org/') as response:
+		with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
+			shutil.copyfileobj(response, tmp_file)
+with open(tmp_file.name) as html:
+	print(html)
