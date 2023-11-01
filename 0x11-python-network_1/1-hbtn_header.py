@@ -5,6 +5,7 @@
 import urllib.request
 import sys
 
+
 def execute():
     """Comment text"""
     with urllib.request.urlopen(sys.argv[1]) as response:
