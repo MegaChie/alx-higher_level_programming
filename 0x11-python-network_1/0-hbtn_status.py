@@ -2,6 +2,6 @@
 
 
 import urllib.request
-with request.get('https://alx-intranet.hbtn.io/status') as response:
-	data = response.raise_for_status()
-	print(data)
+req = urllib.request.Request('https://alx-intranet.hbtn.io/status')
+with urllib.request.urlopen(req) as response:
+the_page = response.read()
