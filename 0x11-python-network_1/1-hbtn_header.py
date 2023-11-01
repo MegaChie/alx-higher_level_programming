@@ -9,7 +9,7 @@ import sys
 def execute():
     """Comment text"""
     with urllib.request.urlopen(sys.argv[1]) as response:
-        print(response.getheader('X-Request-Id'))
+        print(response['X-Request-Id'])
 
 
 if __name__ == "__main__":
