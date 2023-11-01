@@ -3,9 +3,13 @@
 
 
 import urllib.request
-with urllib.request.urlopen("https://intranet.hbtn.io/status") as response:
-    html = response.read()
-    # print("Body response:")
-    # print("\t- type: {}".format(type(html)))
-    # print("\t- content: {}".format(html))
-    # print("\t- utf8 content: {}".format(html.decode("utf-8")))
+import sys
+
+def execute():
+    """Comment text"""
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        value = response.read()
+        print(value.getheader('X-Request-Id'))
+
+if __name__ == "__main__":
+    execute()
