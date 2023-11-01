@@ -8,4 +8,4 @@ with urllib.request.urlopen('http://python.org/') as response:
 	with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
 		shutil.copyfileobj(response, tmp_file)
 with open("tmp_file.name", "r") as html:
-	print str(html)
+	print (html.read())
