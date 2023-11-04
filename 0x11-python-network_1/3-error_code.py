@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-# comment text
-
-
+"""Error code #0"""
 import urllib.request
 import urllib.parse
 import sys
@@ -15,7 +13,6 @@ def program():
             print(html.decode("utf-8"))
     except urllib.error.HTTPError as fetal:
         print("Error code: {}".format(fetal.code))
-
 
 if __name__ == "__main__":
     program()
