@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-# comment text
-
-
+"""What's my status?"""
 import urllib.request
 
 
