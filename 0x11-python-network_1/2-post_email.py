@@ -9,11 +9,13 @@ import sys
 
 def program():
     """Comment text"""
-    data = parse.urlencode("email": sys.agrv[2])
-    req = request.Request(sys.agrv[1], data)
-    sent = request.urlopen(req)
-    with urllib.request.urlopen(sys.agrv[1], data) as f:
-        print(f.read().decode('utf-8'))        
+    sent = {'email': sys.argv[2]}
+    data = urllib.parse.urlencode(sent)
+    data = data.encode("ascii")
+    req = urllib.request.Request(sys.argv[1], data)
+    with urllib.request.urlopen(req) as answer:
+        html = answer.read()
+        print(html.decode("utf-8"))
 
 
 if __name__ == "__main__":
