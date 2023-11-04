@@ -9,7 +9,7 @@ import sys
 
 def program():
     """Comment text"""
-    data = parse.urlencode('email':sys.agrv[2])
+    data = parse.urlencode("email": sys.agrv[2])
     req = request.Request(sys.agrv[1], data)
     sent = request.urlopen(req)
     with urllib.request.urlopen(sys.agrv[1], data) as f:
