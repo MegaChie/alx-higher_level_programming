@@ -14,5 +14,6 @@ def program():
     except urllib.error.HTTPError as fetal:
         print("Error code: {}".format(fetal.code))
 
+
 if __name__ == "__main__":
     program()
