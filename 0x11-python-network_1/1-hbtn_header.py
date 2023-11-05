@@ -2,7 +2,7 @@
 """Response header value"""
 
 
-import urllib
+import urllib.request
 import sys
 
 
