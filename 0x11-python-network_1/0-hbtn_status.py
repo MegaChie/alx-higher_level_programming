@@ -5,8 +5,8 @@ import urllib.request
 
 def program():
     """Program code"""
-    with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
-        html = response.read()
+    with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as polo:
+        html = polo.read()
         print("Body response:")
         print("\t- type: {}".format(type(html)))
         print("\t- content: {}".format(html))
