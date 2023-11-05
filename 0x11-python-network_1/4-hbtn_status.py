@@ -1,18 +1,14 @@
 #!/usr/bin/python3
-"""Error code #0"""
+"""What's my status?"""
 import urllib.request
-import urllib.parse
-import sys
 
 
 def program():
     """Comment text"""
-    try:
-        with urllib.request.urlopen(sys.argv[1]) as answer:
-            html = answer.read()
-            print(html.decode("utf-8"))
-    except urllib.error.HTTPError as fetal:
-        print("Error code: {}".format(fetal.code))
+    with request.get("https://alx-intranet.hbtn.io/status") as answer:
+        print("Body response:")
+        print("\t- type: {}".format(type(answer)))
+        print("\t- content: {}".format(answer))
 
 
 if __name__ == "__main__":
