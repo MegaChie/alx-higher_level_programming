@@ -7,7 +7,7 @@ import sys
 def program():
     """Comment text"""
     polo = requests.get(sys.argv[1])
-    print(polo.headers('X-Request-Id'))
+    print(polo.headers.get('X-Request-Id'))
 
 
 if __name__ == "__main__":
