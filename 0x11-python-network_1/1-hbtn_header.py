@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# comment text
+"""Response header value"""
 
 
 import urllib
@@ -7,7 +7,7 @@ import sys
 
 
 def program():
-    """Comment text"""
+    """Program's code"""
     with urllib.request.urlopen(sys.argv[1]) as response:
         print(response.getheader('X-Request-Id'))
 
