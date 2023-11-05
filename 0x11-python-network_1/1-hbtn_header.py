@@ -2,7 +2,7 @@
 # comment text
 
 
-import urllib.request
+import urllib
 import sys
 
 
