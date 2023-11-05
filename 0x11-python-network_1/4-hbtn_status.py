@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """What's my status?"""
-import urllib.request
+import request
 
 
 def program():
