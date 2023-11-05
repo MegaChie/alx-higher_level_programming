@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """What's my status?"""
 import requests
+import sys
 
 
 def program():
