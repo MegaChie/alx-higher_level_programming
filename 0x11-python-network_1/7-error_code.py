@@ -10,7 +10,7 @@ def program():
     if polo.status_code >= 400:
         print("Error code: {}".format(polo.status_code))
     else:
-        pass
+        print(polo.content.decode("utf-8"))
 
 
 if __name__ == "__main__":
