@@ -7,8 +7,8 @@ import sys
 def program():
     """Comment text"""
     polo = requests.get(sys.argv[1])
-    if polo.code >= 400:
-        print("Error code: {}".format(polo.code))
+    if response.status_code >= 400:
+        print("Error code: {}".format(response.status_code))
 
 
 if __name__ == "__main__":
