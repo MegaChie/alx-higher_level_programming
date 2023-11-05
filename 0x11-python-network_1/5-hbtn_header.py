@@ -6,8 +6,8 @@ import sys
 
 def program():
     """Comment text"""
-    with requests.get(sys.argv[1]) as polo:
-        print(polo.getheader('X-Request-Id'))
+    polo = requests.get(sys.argv[1])
+    print(polo.headers('X-Request-Id'))
 
 
 if __name__ == "__main__":
