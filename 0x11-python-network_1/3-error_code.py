@@ -11,7 +11,7 @@ def program():
         with urllib.request.urlopen(sys.argv[1]) as answer:
             html = response.read()
             print(html.decode("utf-8"))
-    except HTTPError as fetal:
+    except urllib.error.HTTPError as fetal:
         print("Error code: {}".format(fetal.code))
 
 
