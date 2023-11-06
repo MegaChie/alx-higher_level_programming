@@ -7,7 +7,7 @@ import sys
 def program():
     """Comment text"""
     url = "http://0.0.0.0:5000/search_user"
-    if sys.argv[1] == NULL:
+    if len(sys.argv) == 1:
         q = ""
     else:
         q = sys.argv[1]
@@ -15,7 +15,7 @@ def program():
     try:
         polo = marko.json()
         if polo:
-            print("[{}] {}".format(polo["id"], polo["name"]))
+            print("[{}] {}".format(polo['id'], polo['name']))
         else:
             print("No result")
     except:
