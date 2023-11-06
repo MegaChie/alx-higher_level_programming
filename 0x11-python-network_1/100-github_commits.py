@@ -1,20 +1,21 @@
 #!/usr/bin/python3
-"""My GitHub!"""
+"""Time for an interview!"""
 import requests
-from requests.auth import HTTPBasicAuth
 import sys
 
 
 def program():
     """Comment text"""
-    name, pkey = sys.argv[1], sys.argv[2]
-    marko = requests.get("https://api.github.com/user",
-                         auth=(HTTPBasicAuth(name, pkey)))
+    url = "https://api.github.com/repos/{}/{}/commits".format(sys.argv[2],
+                                                              sys.argv[1])
+    marko = requests.get(url)
     try:
         polo = marko.json()
-        print(polo['id'])
-    except:
-        print("None")
+        for i in range(10):
+            print("{}: {}".format(polo[i]['sha'],
+                                  polo[i]['commit']['author']['name']))
+    except IndexError:
+        pass
 
 
 if __name__ == "__main__":
