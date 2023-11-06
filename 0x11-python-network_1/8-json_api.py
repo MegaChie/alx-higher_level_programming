@@ -18,7 +18,7 @@ def program():
             print("[{}] {}".format(polo['id'], polo['name']))
         else:
             print("No result")
-    except JSONDecodeError:
+    except:
         print("Not a valid JSON")
 
 
