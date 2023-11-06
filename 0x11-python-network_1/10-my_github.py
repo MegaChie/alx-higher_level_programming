@@ -1,25 +1,20 @@
 #!/usr/bin/python3
-"""Error code"""
+"""My GitHub!"""
 import requests
+from requests.auth import HTTPBasicAuth
 import sys
 
 
 def program():
     """Comment text"""
-    url = "http://0.0.0.0:5000/search_user"
-    if len(sys.argv) == 1:
-        q = ""
+    name, pkey = sys.argv[1], sys.argv[2]
+    marko = requests.get("https://api.github.com/user",
+        auth(HTTPBasicAuth(name, pkey)))
+    polo = marko.json()
+    if polo:
+        print(polo['id'])
     else:
-        q = sys.argv[1]
-    marko = requests.post(url, data={'q': q})
-    try:
-        polo = marko.json()
-        if polo:
-            print("[{}] {}".format(polo['id'], polo['name']))
-        else:
-            print("No result")
-    except JSONDecodeError:
-        print("Not a valid JSON")
+        print("None")
 
 
 if __name__ == "__main__":
