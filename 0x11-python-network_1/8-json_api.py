@@ -6,11 +6,20 @@ import sys
 
 def program():
     """Comment text"""
-    polo = requests.get(sys.argv[1])
-    if polo.status_code >= 400:
-        print("Error code: {}".format(polo.status_code))
+    url = "http://0.0.0.0:5000/search_user"
+    if sys.argv[1] == NULL:
+        q = ""
     else:
-        pass
+        q = sys.argv[1]
+    marko = requests.post(url, data={'q': q})
+    try:
+        polo = marko.json()
+        if polo:
+            print("[{}] {}".format(polo['id'], polo['name']))
+        else:
+            print("No result")
+    except:
+        print("Not a valid JSON")
 
 
 if __name__ == "__main__":
