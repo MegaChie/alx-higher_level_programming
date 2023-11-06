@@ -10,10 +10,10 @@ def program():
     name, pkey = sys.argv[1], sys.argv[2]
     marko = requests.get("https://api.github.com/user",
         auth=(HTTPBasicAuth(name, pkey)))
-    polo = marko.json()
-    if polo:
+    try:
+        polo = marko.json()
         print(polo['id'])
-    else:
+    except:
         print("None")
 
 
