@@ -15,7 +15,7 @@ def program():
     try:
         polo = marko.json()
         if polo:
-            print("[{}] {}".format(polo['id'], polo['name']))
+            print("[{}] {}".format(polo["id"], polo["name"]))
         else:
             print("No result")
     except:
