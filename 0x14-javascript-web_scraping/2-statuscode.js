@@ -1,5 +1,8 @@
 #!/usr/bin/node
-const url = process.argv[2];
-request(url, function (response) {
-  console.log('statusCode:', response && response.statusCode);
-});
+const request = require('request');
+const requestSettings = {
+    url: process.argv[2]
+};
+request(requestSettings, function(error, response, body) {
+    console.log(response.statusCode);
+});   
