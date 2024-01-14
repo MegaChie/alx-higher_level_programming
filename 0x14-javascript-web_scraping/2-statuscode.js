@@ -4,5 +4,5 @@ const requestSettings = {
   url: process.argv[2]
 };
 request(requestSettings, function (error, response, body) {
-  if (!error) :console.log(response.statusCode);
+  if (!error) console.log(response.statusCode);
 });
