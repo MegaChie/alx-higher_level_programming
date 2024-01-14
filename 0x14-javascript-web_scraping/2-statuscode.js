@@ -1,8 +1,4 @@
 #!/usr/bin/node
-require('request').get(process.argv[2], function (err, r) {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log('code: ' + r.statusCode);
-  }
-});
+const response = await fetch(process.argv[2]);
+  console.log('response.status: ', response.status);
+  console.log(response);
