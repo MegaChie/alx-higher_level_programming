@@ -1,4 +1,4 @@
 #!/usr/bin/node
-const response = await fetch(process.argv[2]);
-  console.log('response.status: ', response.status);
-  console.log(response);
+fetch(process.argv[2]).then((response)=>{
+  console.log(response.status);
+}
