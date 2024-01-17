@@ -13,4 +13,5 @@ fs.get(ID, function (error, polo, body) {
       }
     }
   }
+  console.log(count);
 });
