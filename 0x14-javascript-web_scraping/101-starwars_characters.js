@@ -9,7 +9,7 @@ fs.get(link, function (error, polo, body) {
     for (let i = 0; i < data.length; i++) {
       fs.get(data[i], function (error, polo, ans) {
         if (!error) console.log(JSON.parse(ans).name);
-        break;
+        continue;
       });
     }
   }
