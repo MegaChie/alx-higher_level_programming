@@ -1,4 +1,7 @@
 #!/usr/bin/node
-request(process.argv[2], function (error, response, body) {
-  console.log('code:', response && response.statusCode); 
+const link = process.argv[2];
+const fs = require('request');
+fs.get(link, function (error, polo, body) {
+  if (error) throw error;
+  console.log(body.status);
 });
