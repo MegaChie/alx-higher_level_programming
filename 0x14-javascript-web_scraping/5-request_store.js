@@ -6,7 +6,7 @@ opener.get(ID, function (error, polo, body) {
   else {
     const writer = require('fs');
     const loc = process.argv[3];
-    writer.writeFile(loc, body, err => {
+    writer.writeFile(loc, body, 'utf8', err => {
       if (err) {
         console.error(err);
       }
