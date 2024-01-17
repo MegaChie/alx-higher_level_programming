@@ -10,6 +10,7 @@ fs.get(link, function (error, polo, body) {
     for (let i = 0; i < data.length; i++) {
       arr[i] = data[i];
     }
+    console.log(arr);
     for (let i = 0; i < arr.length; i++) {
       fs.get(arr[i], function (error, polo, ans) {
         if (!error) console.log(JSON.parse(ans).name);
