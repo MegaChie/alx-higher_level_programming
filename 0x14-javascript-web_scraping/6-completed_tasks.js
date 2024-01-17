@@ -9,9 +9,9 @@ fs.get(ID, function (error, polo, body) {
     for (let i = 0; i < data.lengt; i++) {
       if (data[i].completed) {
         if (!(data[i].userId in done)) {
-          done[date[i].userId] = 0;
+          done[data[i].userId] = 0;
         }
-        else done[date[i].userId] += 1;
+        else done[data[i].userId] += 1;
       }
     }
   }
