@@ -5,7 +5,7 @@ const fs = require('request');
 fs.get(link, function (error, polo, body) {
   if (error) throw error;
   else {
-    cons arr = [];
+    const arr = [];
     const data = JSON.parse(body).characters;
     for (let i = 0; i < data.length; i++) {
       arr[i] = data[i];
