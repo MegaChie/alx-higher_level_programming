@@ -1,4 +1,5 @@
 #!/usr/bin/node
-request(process.argv[2], function (error, response, body) {
-  console.log('code:', response && response.statusCode); 
-});
+const base = "https://swapi-api.alx-tools.com/api/films/";
+const ID = process.argv[2];
+const link = base.concat(ID);
+console.log(link);
