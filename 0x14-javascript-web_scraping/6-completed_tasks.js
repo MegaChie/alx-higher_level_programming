@@ -14,6 +14,6 @@ fs.get(ID, function (error, polo, body) {
         else done[data[i].userId] += 1;
       }
     }
-  }
   console.log(done);
+  }
 });
