@@ -5,9 +5,9 @@ const fs = require('request');
 fs.get(link, function (error, polo, body) {
   if (error) throw error;
   else {
-    const data = JSON.stringify(body).characters;
-    console.log(data);
+    const data = JSON.parse(body).characters;
     for (let i = 0; i < data.length; i++) {
+      console.log(data[i]);
       fs.get(data[i], function (error, polo, ans) {
         if (!error) console.log(JSON.parse(ans).name);
       });
