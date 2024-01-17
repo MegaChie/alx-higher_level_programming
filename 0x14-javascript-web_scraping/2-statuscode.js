@@ -1,7 +1,5 @@
 #!/usr/bin/node
-const requestSettings = {
-    url: process.argv[2];
-};
-request(requestSettings, function(error, response, body) {
+const link = process.argv[2]
+request(link, function(error, response, body) {
     console.log(response.statusCode);
 });
