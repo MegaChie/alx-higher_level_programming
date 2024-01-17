@@ -1,19 +1,15 @@
 #!/usr/bin/node
 const ID = process.argv[2];
-const fs = require('request');
-fs.get(ID, function (error, polo, body) {
-  if (error) console.log(error);
+const opener = require('request');
+opener.get(ID, function (error, polo, body) {
+  if (error) throw error;
   else {
-    let count = 0;
-    const data = JSON.parse(body).results;
-    for (let i = 0; i < data.length; i++) {
-      for (let j = 0; j < data[i].characters.length; j++) {
-        if (data[i].characters[j].includes('/18/')) {
-          count++;
-          break;
-        }
+    const writer = require('fs');
+    const loc = process.argv[3];
+    writer.writeFile(loc, body, err => {
+      if (err) {
+        console.error(err);
       }
-    }
-    console.log(count);
+    });
   }
 });
