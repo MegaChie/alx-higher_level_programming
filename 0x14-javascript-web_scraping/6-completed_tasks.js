@@ -11,9 +11,7 @@ fs.get(ID, function (error, polo, body) {
         if (!(data[i].userId in done)) {
           done[data[i].userId] = 0;
         }
-        else {
-          done[data[i].userId] += 1;
-        }
+        else done[data[i].userId] += 1;
       }
     }
     console.log(done);
