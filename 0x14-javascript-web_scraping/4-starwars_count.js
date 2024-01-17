@@ -1,9 +1,16 @@
 #!/usr/bin/node
-const base = 'https://swapi-api.alx-tools.com/api/films/';
-const ID = process.argv[2] + '/';
-const link = base.concat(ID);
+const ID = process.argv[2];
 const fs = require('request');
 fs.get(link, function (error, polo, body) {
 if (error) console.log(error);
-console.log(JSON.parse(body).title);
+let count = 0;
+date = JSON.parse(body).results;
+for (let i = 0; i < data.length; i++) {
+  for (let j = 0; j < data[i].characters.length; j++) {
+      if (data[i].characters[n].includes('/18/')) {
+          count++;
+          break;
+      }
+  }
+}
 });
