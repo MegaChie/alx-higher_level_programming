@@ -6,7 +6,7 @@ fs.get(ID, function (error, polo, body) {
   else {
     let done = {};
     const data = JSON.parse(body);
-    for (let i = 0; i < data.lengt; i++) {
+    for (let i = 0; i < data.length; i++) {
       if (data[i].completed) {
         if (!(data[i].userId in done)) {
           done[data[i].userId] = 0;
@@ -14,6 +14,6 @@ fs.get(ID, function (error, polo, body) {
         else done[data[i].userId] += 1;
       }
     }
-  console.log(done);
+    console.log(done);
   }
 });
