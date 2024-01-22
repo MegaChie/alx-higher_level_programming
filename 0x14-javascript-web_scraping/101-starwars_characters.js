@@ -5,15 +5,15 @@ const fs = require('request');
 fs.get(link, function (error, polo, body) {
   if (error) throw error;
   else {
-    let data = JSON.parse(body).characters;
+    const data = JSON.parse(body).characters;
     let i = data.length;
     for (; i != 0; i--) {
-      
-      fs.get(data[0], function (error, polo, body) {
+      let info = data
+      fs.get(info[0], function (error, polo, body) {
         if (error) throw error;
         else console.log(JSON.parse(body).name);
       });
-      data.shift();
+      info.shift();
     }
   }
 });
