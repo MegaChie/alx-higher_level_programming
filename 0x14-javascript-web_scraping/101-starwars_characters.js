@@ -8,11 +8,10 @@ fs.get(link, function (error, polo, body) {
     const data = JSON.parse(body).characters;
     for (let i = data.length; i !== 0; i--) {
       const info = data;
-      fs.get(info[0], function (error, polo1, body1) {
+      fs.get(info[i], function (error, polo1, body1) {
         if (error) throw error;
         else console.log(JSON.parse(body1).name);
       });
-      data.shift();
     }
   }
 });
