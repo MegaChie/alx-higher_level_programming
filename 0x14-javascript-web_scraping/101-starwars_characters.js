@@ -12,7 +12,6 @@ fs.get(link, function (error, polo, body) {
       fs.get(data[0], function (error, polo, body) {
         if (error) throw error;
         else console.log(JSON.parse(body).name);
-        console.log(i);
         data.shift();
       });
     }
