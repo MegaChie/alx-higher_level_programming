@@ -6,17 +6,13 @@ fs.get(link, function (error, polo, body) {
   if (error) throw error;
   else {
     const data = JSON.parse(body).characters;
-    let i = data.length;
-    console.log(data + i);
-    data.shift();
-    i = data.length;
-    console.log(data  + i);
-    // for (; i !== 0; i--) {
-    //   fs.get(data[0], function (error, polo, body) {
-    //     if (error) throw error;
-    //     else console.log(JSON.parse(body).name);
-    //   });
-    //   data.shift();
-    // }
+    for (let i = data.length; i !== 0; i--) {
+      // fs.get(data[0], function (error, polo, body) {
+      //   if (error) throw error;
+      //   else console.log(JSON.parse(body).name);
+      // });
+      console.log(data);
+      data.shift();
+    }
   }
 });
