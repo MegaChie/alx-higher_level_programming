@@ -8,7 +8,7 @@ fs.get(link, function (error, polo, body) {
   else {
     const data = JSON.parse(body).characters;
     while (i < data.length){
-      fs.get(link, function (error, polo, body) {
+      fs.get(data[i], function (error, polo, body) {
         if (error) throw error;
         else console.log(JSON.parse(body).name)
       });
