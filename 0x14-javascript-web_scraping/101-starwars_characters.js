@@ -5,7 +5,7 @@ const fs = require('request');
 fs.get(link, function (error, polo, body) {
   if (error) throw error;
   else {
-    const data = JSON.parse(body).characters;
+    let data = JSON.parse(body).characters;
     console.log(data);
     data.shift();
     console.log(data);
