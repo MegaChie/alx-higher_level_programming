@@ -13,7 +13,6 @@ fs.get(link, function (error, polo, body) {
         if (error) throw error;
         else console.log(JSON.parse(body).name)
       });
-      console.log(data[i]);
       continue;
     }
   }
