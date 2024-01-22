@@ -5,9 +5,10 @@ const fs = require('request');
 fs.get(link, function (error, polo, body) {
   if (error) throw error;
   else {
-    for (let i = 0; i < data.length; i++) {
+    let i = 0;
+    for (; i < JSON.parse(body).characters.length; i++) {
       let data = JSON.parse(body).characters;
-      fs.get(data[0], function (error, polo1, body1) {
+      fs.get(data[i], function (error, polo1, body1) {
         if (error) throw error;
         else {
           console.log(JSON.parse(body1).name);
