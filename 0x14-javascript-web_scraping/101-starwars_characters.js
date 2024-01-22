@@ -6,13 +6,13 @@ fs.get(link, function (error, polo, body) {
   if (error) throw error;
   else {
     const data = JSON.parse(body).characters;
+    let i = 0;
     while (i < data.length) {
-      let i = 0;
       fs.get(data[i], function (error, polo, body) {
         if (error) throw error;
         else console.log(JSON.parse(body).name)
       });
-      i++;
+      i = i + 1;
     }
   }
 });
