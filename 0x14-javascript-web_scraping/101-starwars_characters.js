@@ -7,11 +7,12 @@ fs.get(link, function (error, polo, body) {
   else {
     const data = JSON.parse(body).characters;
     let i = 0;
-    repe:
-    fs.get(data[i], function (error1, polo1, body1) {
-      if (error1) throw error1;
-      else console.log(JSON.parse(body1).name);
-      i++;
-      if (i < data.length) repe;
+    while (True) {
+      fs.get(data[i], function (error1, polo1, body1) {
+        if (error1) throw error1;
+        else console.log(JSON.parse(body1).name);
+        i = i + 1;
+        if (i > data.length) break;
+    }
     });
   });
