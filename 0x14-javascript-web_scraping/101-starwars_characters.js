@@ -6,7 +6,6 @@ fs.get(link, function (error, polo, body) {
   if (error) throw error;
   else {
     const data = JSON.parse(body).characters;
-    console.log(data)
     let i = 0;
     while (i < Date.length){
       fs.get(data[i], function (err, content, bod) {
