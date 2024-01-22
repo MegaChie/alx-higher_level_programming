@@ -7,5 +7,13 @@ fs.get(link, function (error, polo, body) {
   else {
     const data = JSON.parse(body).characters;
     console.log(data)
+    let i = 0;
+    while (i < Date.length){
+      fs.get(data[i], function (err, content, bod) {
+        if (err) throw err;
+        else console.log(JSON.parse(bod).name);
+      })
+      i++;
+    }
     }
   });
