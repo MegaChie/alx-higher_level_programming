@@ -7,12 +7,12 @@ fs.get(link, function (error, polo, body) {
   else {
     const data = JSON.parse(body).characters;
     let i = 0;
-    while (i < data.length) {
+    for (; i < data.length; i++) {
       fs.get(data[i], function (error, polo, body) {
         if (error) throw error;
         else console.log(JSON.parse(body).name)
       });
-      i = i + 1;
+      continue;
     }
   }
 });
