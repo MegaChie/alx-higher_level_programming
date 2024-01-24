@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("UL.my_list").append("<li>Item</li>")
   });
   $("DIV#remove_item").on("click", function() {
-    $("UL.my_list").remove(last("<li>Item</li>"))
+    $("UL.my_list").children().last().remove()
   });
   $("DIV#clear_list").on("click", function() {
     $("UL.my_list").empty()
