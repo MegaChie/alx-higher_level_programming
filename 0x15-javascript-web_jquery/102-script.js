@@ -4,7 +4,7 @@ $(document).ready( function() {
     const lang = $("INPUT#language_code").val();
     const link = base + "?lang=" + lang;
     $.get(link, + function(json) {
-      $("DIV#hello").html(json.hello);
+      $("DIV#hello").text(json.hello);
     });
   });
 });
