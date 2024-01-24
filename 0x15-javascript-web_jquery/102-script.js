@@ -1,2 +1,6 @@
-const lang = $("INPUT#language_code");
-$("DIV#hello").text(lang);
+const base = "https://www.fourtonfish.com/hellosalut/hello/";
+const lang = $("INPUT#language_code").text;
+const link = base + "?lang=" + lang;
+$.get(link, function(json) {
+  $("DIV#hello").text(json.hello);
+});
