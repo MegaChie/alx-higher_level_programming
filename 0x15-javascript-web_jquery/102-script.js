@@ -1,7 +1,9 @@
 $(document).ready( function() {
-  const link = "https://www.fourtonfish.com/hellosalut/hello/";
+  const base = "https://www.fourtonfish.com/hellosalut/hello/";
   $("INPUT#btn_translate").on("click", function() {
-    $.get(link, + $.param({ lang: $('INPUT#language_code').val() }), function(json) {
+    const lang = $("INPUT#language_code").val();
+    const link = base + "?lang=" + lang;
+    $.get(link, + function(json) {
       $("DIV#hello").html(json.hello);
     });
   });
