@@ -1,2 +1,2 @@
 const lang = $("INPUT#language_code");
-console.log(lang);
+$("DIV#hello").text(lang);
