@@ -6,5 +6,6 @@ if (process.argv.length === 2 || isNaN(process.argv)) {
   for (let index = 2; index < process.argv.length; index++) {
     nums[index - 2] = process.argv[index];    
   }
-  console.log(nums.sort()[1])
+  const big = nums.sort();
+  console.log(big[1]);
 }
