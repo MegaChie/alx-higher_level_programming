@@ -6,6 +6,6 @@ if (process.argv.length === 2 || process.argv.length === 2) {
   for (let index = 2; index < process.argv.length; index++) {
     nums.push(process.argv[index]);
   }
-  const big = nums.sort(function (a, b){ return a - b; });
+  const big = nums.sort(function (a, b) { return a - b; });
   console.log(big[big.length - 2]);
 }
