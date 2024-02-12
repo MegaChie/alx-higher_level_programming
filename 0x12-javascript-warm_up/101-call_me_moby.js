@@ -1,2 +1,6 @@
 #!/usr/bin/node
-myVar = 333;
+function (x, theFunction) {
+  for (let index = 0; index < parseInt(x); index++) {
+    theFunction;    
+  }
+}
