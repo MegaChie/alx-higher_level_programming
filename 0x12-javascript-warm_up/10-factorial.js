@@ -1,7 +1,7 @@
 #!/usr/bin/node
 function fact (a) {
   if (a > 0) {
-    return (a * fact(a - 1));
+    return a * fact(a - 1);
   }  
 }
 if (isNaN(process.argv[2]) === false) {
