@@ -1,5 +1,9 @@
 #!/usr/bin/node
-function add (a, b) {
-  console.log(a + b);
+function fact (a) {
+  console.log(a * fact(a - 1));
 }
-add(parseInt(process.argv[2]), parseInt(process.argv[3]));
+if (isNaN(process.argv[2]) === false) {
+  fact(parseInt(process.argv[2]));
+} else {
+  console.log('1');
+}
