@@ -7,5 +7,5 @@ if (process.argv.length === 2 || process.argv.length === 2) {
     nums.push(process.argv[index]);    
   }
   const big = nums.sort();
-  console.log(big[0]);
+  console.log(big[big.length - 1]);
 }
