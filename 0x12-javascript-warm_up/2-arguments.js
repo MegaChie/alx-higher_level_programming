@@ -1,3 +1,7 @@
 #!/usr/bin/node
-const myVar = 'C is fun\nPython is cool\nJavaScript is amazing';
-console.log(myVar);
+if (process.argv.length < 3) {
+    console.log('No argument');
+}
+else {
+    console.log(process.argv[3]);
+}
