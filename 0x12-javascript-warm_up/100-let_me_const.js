@@ -1,4 +1,2 @@
 #!/usr/bin/node
-exports.add = function (a, b) {
-  return a + b;
-};
+myVar = 333;
