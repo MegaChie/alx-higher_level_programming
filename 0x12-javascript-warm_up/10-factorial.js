@@ -1,6 +1,8 @@
 #!/usr/bin/node
 function fact (a) {
-  console.log(a * fact(a - 1));
+  if (a > 0) {
+    console.log(a * fact(a - 1));
+  }  
 }
 if (isNaN(process.argv[2]) === false) {
   fact(parseInt(process.argv[2]));
