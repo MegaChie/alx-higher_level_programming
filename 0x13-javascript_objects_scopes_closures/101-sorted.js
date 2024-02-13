@@ -1,4 +1,6 @@
 #!/usr/bin/node
-const oldList = require('./100-data.js').list;
-console.log(oldList);
-console.log(oldList.map((x, y) => x * y));
+const oldDict = require('./101-data.js').dict;
+const key = oldDict.keys();
+console.log(key);
+const value = oldDict.values();
+console.log(value);
