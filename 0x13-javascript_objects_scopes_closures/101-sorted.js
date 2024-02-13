@@ -1,4 +1,4 @@
 #!/usr/bin/node
 const oldDict = require('./101-data.js').dict;
-const value = oldDict.values();
+const value = Object.values(oldDict);
 console.log(value);
