@@ -1,2 +1,4 @@
 #!/usr/bin/node
-module.exports = class Rectangle {};
+const oldList = require('./100-data.js');
+console.log(oldList);
+console.log(oldList.map((x, y) => x * y));
