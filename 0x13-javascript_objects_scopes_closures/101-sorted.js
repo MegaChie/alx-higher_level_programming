@@ -1,10 +1,10 @@
 #!/usr/bin/node
-const oldDict = require('./101-data.js').dict;
+const oldDict = require('./101-data.js').oldDict;
 const newDict = {};
-for (const place in dict) {
-  if (newDict[dict[place]] === undefined) {
-    newDict[dict[place]] = [];
+for (const place in oldDict) {
+  if (newDict[oldDict[place]] === undefined) {
+    newDict[oldDict[place]] = [];
   }
-  newDict[dict[place]].push(place);
+  newDict[oldDict[place]].push(place);
 }
 console.log(newDict);
