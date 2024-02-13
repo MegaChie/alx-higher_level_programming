@@ -1,7 +1,8 @@
 #!/usr/bin/node
 const oldDict = require('./101-data.js').dict;
-const value = Object.values(oldDict);
-const key = Object.keys(oldDict);
-console.log(value);
-console.log(key);
-console.log(Object.entries(oldDict));
+const newDict = {};
+const key = Object.keys(oldDict)
+for (let index = 0; index < key.length; index++) {
+  newDict[oldDict[key[index]]].push(key[index]);
+}
+console.log(newDict);
