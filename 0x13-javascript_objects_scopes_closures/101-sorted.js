@@ -1,11 +1,10 @@
 #!/usr/bin/node
 const oldDict = require('./101-data.js').dict;
 const newDict = {};
-const key = Object.keys(oldDict)
-for (let index = 0; index < key.length; index++) {
-  if (newDict[oldDict[key[index]]].push(key[index]) === undefined) {
-    newDict[oldDict[key[index]]] = [];
+for (const place in dict) {
+  if (newDict[dict[place]] === undefined) {
+    newDict[dict[place]] = [];
   }
-  newDict[oldDict[key[index]]].push(key[index]);
+  newDict[dict[place]].push(place);
 }
 console.log(newDict);
