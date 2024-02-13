@@ -4,3 +4,4 @@ const value = Object.values(oldDict);
 const key = Object.keys(oldDict);
 console.log(value);
 console.log(key);
+console.log(Object.entries(oldDict));
