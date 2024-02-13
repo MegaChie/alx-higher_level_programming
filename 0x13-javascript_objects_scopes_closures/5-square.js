@@ -1,7 +1,6 @@
 #!/usr/bin/node
-module.exports = class Rectangle {
-  constructor (w, h) {
-    this.width = w;
-    this.height = h;
+module.exports = class Square extends require('./4-rectangle.js') {
+  constructor (size) {
+    super(size, size);
   }
 };
