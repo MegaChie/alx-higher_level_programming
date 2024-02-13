@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const oldDict = require('./101-data.js').oldDict;
+const oldDict = require('./101-data').dict;
 const newDict = {};
 for (const i in oldDict) {
   if (newDict[oldDict[i]] === undefined) {
