@@ -1,2 +1,2 @@
 # alx-higher_level_programming
-Contain tasks of the python course of ALX Software Engineer training
+Contains projects of the high-level programming languages by ALX Software Engineering training.
