@@ -10,7 +10,7 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3])
     curs = conn.cursor()
     ques = """select cities.id, cities.name, states.name from cities
-              where join states on cities.id = states.id
+              where join cities on cities.state_id = states.id
               order by cities.id"""
     curs.execute(ques)
     result = curs.fetchall()
