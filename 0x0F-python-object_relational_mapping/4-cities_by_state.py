@@ -9,7 +9,9 @@ if __name__ == "__main__":
     conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
                            passwd=sys.argv[2], db=sys.argv[3])
     curs = conn.cursor()
-    ques = """select * from cities where cities.id = states.id"""
+    ques = """select cities.id, cities.name, states.name from cities
+              where join cities on cities.id = states.id
+              order by cities.id"""
     curs.execute(ques)
     result = curs.fetchall()
     for line in result:
