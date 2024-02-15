@@ -13,6 +13,9 @@ if __name__ == "__main__":
               join states on cities.state_id = states.id
               and states.name = '{}' order by cities.id;""".format(sys.argv[4])
     curs.execute(ques)
-    result = str(curs.fetchall())
-    print(result.replace("((", "").replace("),", ""))
+    result = curs.fetchall()
+    statList = []
+    for item in result:
+        statList.append(item[1])
+    print(statList)
     conn.close()
