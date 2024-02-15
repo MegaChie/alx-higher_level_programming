@@ -13,4 +13,4 @@ if __name__ == "__main__":
     result = curs.fetchall()
     for line in result:
         print(line)
-    curs.close()
+    conn.close()
