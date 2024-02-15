@@ -14,5 +14,8 @@ if __name__ == "__main__":
               and states.name = '{}' order by cities.id;""".format(sys.argv[4])
     curs.execute(ques)
     result = curs.fetchall()
+    result.replace("(", "")
+    result.replace("\'", "")
+    result.replace(")", "")
     print(result)
     conn.close()
