@@ -16,5 +16,5 @@ if __name__ == "__main__":
     result = curs.fetchall()
     print(str(result).replace("(", "")
           .replace("\'", "").replace(")", "")
-          .replace(",,", "'"))
+          .replace(",,", ","))
     conn.close()
