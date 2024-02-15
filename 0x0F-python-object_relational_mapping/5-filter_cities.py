@@ -17,5 +17,5 @@ if __name__ == "__main__":
     statList = []
     for item in result:
         statList.append(item[0])
-    print(statList)
+    print(", ".join(statList))
     conn.close()
