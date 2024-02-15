@@ -11,7 +11,7 @@ if __name__ == "__main__":
     curs = conn.cursor()
     ques = """select name from cities
               join states on cities.state_id = states.id
-              and states.name = {} order by cities.id;""".format(sys.argv[4])
+              and states.name = '{}' order by cities.id;""".format(sys.argv[4])
     curs.execute(ques)
     result = curs.fetchall()
     print(line)
