@@ -10,7 +10,7 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3])
     curs = conn.cursor()
     curs.execute("select * from cities order by id"
-                 .format(sys.argv[4])
+                 .format(sys.argv[4]))
     result = curs.fetchall()
     for line in result:
         print(line)
