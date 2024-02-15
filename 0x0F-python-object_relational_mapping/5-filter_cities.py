@@ -16,6 +16,6 @@ if __name__ == "__main__":
     result = curs.fetchall()
     statList = []
     for item in result:
-        statList.append(item[1])
+        statList.append(item[0])
     print(statList)
     conn.close()
