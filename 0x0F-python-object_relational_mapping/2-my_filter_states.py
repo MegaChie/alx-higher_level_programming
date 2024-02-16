@@ -13,8 +13,7 @@ if __name__ == "__main__":
               where name like BINARY '{}'
               order by id""".format(sys.argv[4])
     # print(sys.argv[4])
-    curs.execute("select * from states where name like BINARY '{}' order by id"
-                 .format(sys.argv[4]))
+    curs.execute(stat)
     result = curs.fetchall()
     for line in result:
         print(line)
