@@ -11,7 +11,7 @@ if __name__ == "__main__":
                             passwd=sys.argv[2], db=sys.argv[3])
         curs = conn.cursor()
         stat = """select * from states
-                where binary name '{}'
+                where binary name = '{}'
                 order by id""".format(sys.argv[4])
         # print(sys.argv[4])
         curs.execute(stat)
