@@ -13,7 +13,7 @@ if __name__ == "__main__":
                         pool_pre_ping=True)
     Base.metadata.create_all(eng)
     sess = Session(eng)
-    result = sess.query(State).filter(State.id = 2).update(
+    result = sess.query(State).filter(State.id == 2).update(
             State.name="New Mexico")
     for item in result:
         if "Louisiana" in item.__dict__["name"]:
