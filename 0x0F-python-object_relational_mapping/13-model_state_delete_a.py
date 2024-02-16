@@ -16,6 +16,6 @@ if __name__ == "__main__":
     result = sess.query(State).all()
     for item in result:
         if "a" in item.__dict__["name"]:
-            sess.item.delete()
+            sess.delete(item)
     sess.commit()
     sess.close()
