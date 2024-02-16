@@ -14,13 +14,12 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     sess = Session(eng)
     result = sess.query(State).all()
-    stateList = []
+    stateList = None
     for item in result:
         if sys.argv[4] in item.__dict__["name"]:
-            stateList.append(item.__dict__["id"])
-    if len(stateList) == 0:
+            stateList = item.__dict__["id"]
+    if stateList is None:
         print("Not found")
     else:
-        for elem in stateList:
-            print(elem)
+        print(stateList)
     sess.close()
