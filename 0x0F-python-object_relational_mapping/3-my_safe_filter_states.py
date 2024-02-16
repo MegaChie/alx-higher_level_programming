@@ -6,7 +6,7 @@ import sys
 
 if __name__ == "__main__":
     """Task #3"""
-    if len(sys.argv) == 4
+    if len(sys.argv) == 4:
         conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
                             passwd=sys.argv[2], db=sys.argv[3])
         curs = conn.cursor()
@@ -14,8 +14,7 @@ if __name__ == "__main__":
                 where name like BINARY '{}'
                 order by id""".format(sys.argv[4])
         # print(sys.argv[4])
-        curs.execute("select * from states where name like BINARY '{}' order by id"
-                    .format(sys.argv[4]))
+        curs.execute(stat)
         result = curs.fetchall()
         for line in result:
             print(line)
