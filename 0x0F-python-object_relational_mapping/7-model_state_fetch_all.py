@@ -15,5 +15,5 @@ if __name__ == "__main__":
     sess = Session(eng)
     result = sess.query(State).all()
     for item in result:
-        print("{}: {}".format(item.__dict__['id'], item.__dict__['name']))
+        print("{}: {}".format(item.__dict__["id"], item.__dict__["name"]))
     sess.close()
