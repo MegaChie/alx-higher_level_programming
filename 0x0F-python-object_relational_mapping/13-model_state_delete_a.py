@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """SQLAlchemy quering"""
 import sys
-from sqlalchemy import create_engine, delete
+from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from model_state import Base, State
 
@@ -14,9 +14,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     sess = Session(eng)
     result = sess.query(State).all()
-    if result:
-        for item in result:
-            if "a" in item.__dict__["name"]:
-                sess.delete(item)
+    for item in result:
+        if "a" in item.__dict__["name"]:
+            sess.delete(item)
     sess.commit()
     sess.close()
