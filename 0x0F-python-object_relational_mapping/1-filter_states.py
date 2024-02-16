@@ -9,7 +9,9 @@ if __name__ == "__main__":
     conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
                            passwd=sys.argv[2], db=sys.argv[3])
     curs = conn.cursor()
-    curs.execute("select * from states where name like 'n%' order by id")
+    stat = """select * from states 
+              where name like REGEXP '^[N].*$' order by id"""
+    curs.execute(stat)
     result = curs.fetchall()
     for line in result:
         print(line)
