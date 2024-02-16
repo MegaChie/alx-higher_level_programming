@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     sess = Session(eng)
     dele = delete(State)
-    dele = dele.where(State.name.contains("a"))
+    dele = dele.where(State.c.name.contains("a"))
     sess.execute(dele)
     sess.commit()
     sess.close()
