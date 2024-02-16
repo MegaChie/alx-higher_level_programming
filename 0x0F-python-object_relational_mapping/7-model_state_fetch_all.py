@@ -14,5 +14,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     sess = Session(eng)
     result = sess.query(State).all()
-    print(result)
+    for item in result:
+        print(item)
     sess.close()
