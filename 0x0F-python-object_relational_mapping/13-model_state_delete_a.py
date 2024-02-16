@@ -17,5 +17,5 @@ if __name__ == "__main__":
     for item in result:
         if "a" in item.__dict__["name"]:
             sess.delete(item)
-            sess.commit()
+    sess.commit()
     sess.close()
