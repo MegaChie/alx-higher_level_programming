@@ -13,13 +13,11 @@ if __name__ == "__main__":
                         pool_pre_ping=True)
     Base.metadata.create_all(eng)
     sess = Session(eng)
+    stat = State(name="Louisiana", published=True)
+    sess.add(stat)
+    sess.commit()
     result = sess.query(State).all()
-    stateList = None
     for item in result:
-        if sys.argv[4] in item.__dict__["name"]:
-            stateList = item.__dict__["id"]
-    if stateList is None:
-        print("Not found")
-    else:
-        print(stateList)
+        if "Louisiana" in item.__dict__["name"]:
+            print(item.__dict__["id"])
     sess.close()
