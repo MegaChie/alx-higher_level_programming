@@ -14,8 +14,9 @@ if __name__ == "__main__":
                         pool_pre_ping=True)
     Base.metadata.create_all(eng)
     sess = Session(eng)
-    dele = delete(State)
-    dele = dele.where(State.c.name.contains("a"))
-    sess.execute(dele)
+    result = sess.query(State).all()
+    for item in result:
+        if "a" in item.__dict__["name"]:
+            item.delete()
     sess.commit()
     sess.close()
