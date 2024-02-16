@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """SQLAlchemy quering"""
 import sys
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, delete
 from sqlalchemy.orm import Session
 from model_state import Base, State
 
