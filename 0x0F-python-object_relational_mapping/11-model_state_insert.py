@@ -13,7 +13,7 @@ if __name__ == "__main__":
                         pool_pre_ping=True)
     Base.metadata.create_all(eng)
     sess = Session(eng)
-    stat = State(name="Louisiana", published=True)
+    stat = State(name="Louisiana")
     sess.add(stat)
     sess.commit()
     result = sess.query(State).all()
