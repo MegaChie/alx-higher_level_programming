@@ -13,7 +13,8 @@ if __name__ == "__main__":
                         pool_pre_ping=True)
     Base.metadata.create_all(eng)
     sess = Session(eng)
-    result = sess.query(State).all()
+    result = sess.query(State, City).join(City).all()
     for item in result:
-        print("{}: {}".format(item.__dict__["id"], item.__dict__["name"]))
+        print("{}: ({}) {}".format(item[0].__dict__["name"],
+              item[1].__dict__["id"], item[1].__dict__["name"]))
     sess.close()
