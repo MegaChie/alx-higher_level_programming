@@ -13,9 +13,9 @@ if __name__ == "__main__":
                         pool_pre_ping=True)
     Base.metadata.create_all(eng)
     sess = Session(eng)
-    result = sess.query(State).first()
-    if result:
-        print("{}: {}".format(result.__dict__['id'], result.__dict__['name']))
-    else:
-        print("Nothing")
+    result = sess.query(State).all()
+    for item in result:
+        if "a" in item.__dict__["name"]:
+            print("{}: {}"
+                  .format(item.__dict__["id"], item.__dict__["name"]))
     sess.close()
