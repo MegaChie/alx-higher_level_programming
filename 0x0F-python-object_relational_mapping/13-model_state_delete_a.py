@@ -14,7 +14,7 @@ if __name__ == "__main__":
                         pool_pre_ping=True)
     Base.metadata.create_all(eng)
     sess = Session(eng)
-    dele = State.delete().where("a" in State.name)
+    dele = State.delete().where("a" in State.c.name)
     sess.execute(dele)
     sess.commit()
     sess.close()
