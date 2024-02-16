@@ -1,12 +1,16 @@
 #!/usr/bin/python3
-"""SQLAlchemy classes"""
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-Base = declarative_base()
+"""SQLAlchemy quering"""
+import sys
+from sqlalchemy import create_engine
+from model_state import Base, State
 
 
-class State(Base):
-    """task #7"""
-    __tablename__ = "states"
-    id = Column(Integer, nullable=False, primary_key=True)
-    name = Column(String(128), nullable=False)
+if __name__ == "__main__":
+    """task #8"""
+    eng = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
+                        .format(sys.argv[1], sys.argv[2], sys.argv[3]),
+                        pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+    sess = Session(eng)
+    result = sess.query(State).all()
+    print(result)
