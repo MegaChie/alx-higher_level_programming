@@ -18,4 +18,5 @@ if __name__ == "__main__":
     replace = replace.values({"name": "New Mexico"})
     replace = replace.where(State.id == 2)
     sess.execute(replace)
+    sess.commit()
     sess.close()
