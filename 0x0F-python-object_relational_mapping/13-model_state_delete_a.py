@@ -14,6 +14,6 @@ if __name__ == "__main__":
                         pool_pre_ping=True)
     Base.metadata.create_all(eng)
     sess = Session(eng)
-    session.query(State).filter("a" in State.name).delete()
-    session.commit()
+    sess.query(State).filter("a" in State.name).delete()
+    sess.commit()
     sess.close()
