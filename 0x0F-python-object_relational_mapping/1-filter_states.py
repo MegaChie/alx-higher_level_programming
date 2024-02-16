@@ -10,7 +10,7 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3])
     curs = conn.cursor()
     stat = """select * from states 
-              where name like REGEXP '^[N].*$' order by id"""
+              where name like '[N]%' order by id"""
     curs.execute(stat)
     result = curs.fetchall()
     for line in result:
