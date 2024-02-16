@@ -14,8 +14,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     sess = Session(eng)
     result = sess.query(State).all()
-    for item in result:
-        if "a" in item.__dict__["name"]:
-            sess.delete(item)
+    if result:
+        for item in result:
+            if "a" in item.__dict__["name"]:
+                sess.delete(item)
     sess.commit()
     sess.close()
