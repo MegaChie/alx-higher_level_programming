@@ -14,3 +14,4 @@ if __name__ == "__main__":
     sess = Session(eng)
     result = sess.query(State).all()
     print(result)
+    sess.close()
