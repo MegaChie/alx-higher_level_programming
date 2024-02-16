@@ -8,7 +8,7 @@ if __name__ == "__main__":
     """Task #3"""
     if len(sys.argv) == 5:
         conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                            passwd=sys.argv[2], db=sys.argv[3])
+                               passwd=sys.argv[2], db=sys.argv[3])
         curs = conn.cursor()
         stat = """select * from states
                   where name like BINARY '{}'
