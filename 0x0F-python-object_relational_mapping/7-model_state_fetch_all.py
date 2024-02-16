@@ -2,6 +2,7 @@
 """SQLAlchemy quering"""
 import sys
 from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
 from model_state import Base, State
 
 
