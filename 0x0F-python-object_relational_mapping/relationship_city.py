@@ -5,8 +5,7 @@ from relationship_state import Base
 
 
 class City(Base):
-    """A class that defines City insatnces"""
-
+    """task #16"""
     __tablename__ = "cities"
     id = Column(Integer, autoincrement=True, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
