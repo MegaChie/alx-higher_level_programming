@@ -1,21 +1,18 @@
 #!/usr/bin/python3
-"""Using MySQLdb to connect and query a database"""
-import MySQLdb
+"""Using MySQLconn to connect and query a database"""
+import MySQLconn
 import sys
 
 
 if __name__ == "__main__":
-    """Task #3"""
-    if len(sys.argv) == 4:
-        conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                            passwd=sys.argv[2], db=sys.argv[3])
-        curs = conn.cursor()
-        stat = """select * from states
-                where binary name = '{}'
-                order by id""".format(sys.argv[4])
-        # print(sys.argv[4])
-        curs.execute(stat)
-        result = curs.fetchall()
-        for line in result:
-            print(line)
-        conn.close()
+    """task #4"""
+    conn = MySQLconn.connect(host="localhost", user=argv[1], port=3306,
+                         passwd=argv[2], conn=argv[3])
+    curs = conn.cursor()
+    stat = """SELECT * FROM states 
+           WHERE name LIKE BINARY %(name)s
+           ORDER BY states.id ASC""" {"name": argv[4]}
+    curs.execute(stat)
+    result = curs.fetchall()
+    for line in result:
+        print(line)
