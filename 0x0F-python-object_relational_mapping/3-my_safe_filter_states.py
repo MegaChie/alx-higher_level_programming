@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Using MySQLconn to connect and query a database"""
-import MySQLconn
+import MySQLdb
 from sys import argv
 
 
