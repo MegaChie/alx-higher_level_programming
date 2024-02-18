@@ -4,7 +4,7 @@ from relationship_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from relationship_city import City
-from sys
+import sys
 
 
 if __name__ == "__main__":
