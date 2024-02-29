@@ -1,7 +1,5 @@
 #!/bin/bash
 # Makes a request to 0.0.0.0:5000/catch_me
 # that causes the server to respond with a message containing "You got me!"
-curl -X PUT 0.0.0.0:5000/catch_me
-   -H "Content-Type: text/html; charset=UTF-8" 
-   --data "You got me!"
+curl -sH 'X-School-User-Id: 98' 0.0.0.0:5000/catch_me
 curl -sL 0.0.0.0:5000/catch_me
