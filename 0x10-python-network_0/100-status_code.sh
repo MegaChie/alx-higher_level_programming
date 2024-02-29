@@ -1,3 +1,5 @@
 #!/bin/bash
-# Sends a request to the URL passed and displays response's status code.
-curl -s -o /dev/null -w "%{http_code}" "$1"
+# Makes a request to 0.0.0.0:5000/catch_me
+# that causes the server to respond with a message containing "You got me!"
+curl -X PUT 0.0.0.0:5000/catch_me -d "You got me!"
+curl -sL 0.0.0.0:5000/catch_me
