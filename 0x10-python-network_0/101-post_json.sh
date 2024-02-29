@@ -1,3 +1,3 @@
 #!/bin/bash
-# Sends a POST request to the passed URL and displays the body of the response
-curl -sd "email=test@gmail.com&subject=I will always be here for PLD" "$1"
+# Sends a JSON POST request to URL passed and displays the response's body
+curl -sH "Content-Type: application/json" --data "@$2" "$1"
