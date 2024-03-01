@@ -8,7 +8,8 @@ import urllib.request as urlR
 
 if __name__ == "__main__":
     """
-    sends a request to the URL and displays the body of the response
+    Sends a request to the URL and displays the body of the response
+    or displays the error code if the request fails
     """
     link = sys.argv[1]
     try:
