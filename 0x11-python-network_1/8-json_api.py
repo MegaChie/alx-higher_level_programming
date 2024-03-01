@@ -14,13 +14,10 @@ if __name__ == "__main__":
     if len(sys.argv) == 2:
         data = {"q": sys.argv[1]}
     else:
-        data = {"q": ""}
+        data = {"q": "",}
     with req.post(link, data=data) as marko:
-        try:
-            polo = marko.json()
-            if polo:
-                print("[{}] {}".format(polo.get("id"), polo.get("name")))
-            else:
-                print("No result")
-        except:
-            print("Not a valid JSON")
+        polo = marko.json()
+        if polo:
+            print("[{}] {}".format(polo.get("id"), polo.get("name")))
+        else:
+            print("No result")
