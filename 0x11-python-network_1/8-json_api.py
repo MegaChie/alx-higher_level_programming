@@ -14,7 +14,7 @@ if __name__ == "__main__":
     if len(sys.argv) == 2:
         data = {"q": sys.argv[1]}
     else:
-        data = {"q": "",}
+        data = {"q": ""}
     with req.post(link, data=data) as marko:
         polo = marko.json()
         if polo:
