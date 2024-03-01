@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-"""2. POST an email #0"""
+"""6. POST an email #1"""
 import sys
-import urllib.parse as urlP
-import urllib.request as urlR
+import requests as req
 
 
 if __name__ == "__main__":
     """
     Sends a POST request to the passed URL with the email as a parameter
-    then displays the body of the response
+    then displays the body of the response.
+    This time it uses requests library.
     """
     link = sys.argv[1]
     data = {"email": sys.argv[2]}
-    seriData = urlP.urlencode(data).encode("ascii")
-    with urlR.urlopen(link, data=seriData) as marko:
-        polo = marko.read()
-        print(polo.decode())
+    with req.post(link, data=date) as marko:
+        polo = marko.text
+        print(polo)
