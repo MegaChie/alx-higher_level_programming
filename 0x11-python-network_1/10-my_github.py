@@ -2,7 +2,7 @@
 """9. My GitHub!"""
 import sys
 import requests as req
-from requests.auth import HTTPBasicAuth
+from requests.auth import HTTPBasicAuth as login
 
 if __name__ == "__main__":
     """
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     name = sys.argv[1]
     # password
     phra = sys.argv[2]
-    with req.get(link, auth=HTTPBasicAuth(name, phra)) as marko:
+    with req.get(link, auth=login(name, phra)) as marko:
         polo = marko.json()
         print(polo)
         # print(polo["items"][0].get("id"))
