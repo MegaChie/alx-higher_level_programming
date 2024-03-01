@@ -1,19 +1,17 @@
 #!/usr/bin/python3
-"""3. Error code #0"""
-import sys
-import urllib.error as urlE
-import urllib.parse as urlP
+"""0. What's my status? #0"""
 import urllib.request as urlR
 
 
 if __name__ == "__main__":
     """
-    sends a request to the URL and displays the body of the response
+    Fetches https://alx-intranet.hbtn.io/status
+    and view the body the response body as described
     """
-    link = sys.argv[1]
-    try:
-        with urlR.urlopen(link) as marko:
-            polo = marko.read()
-            print(polo.decode())
-    except urlE.HTTPError as grab:
-        print("Error code: {}".format(grab.code))
+    link = "https://alx-intranet.hbtn.io/status"
+    with urlR.urlopen(link) as marko:
+        polo = marko.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(polo)))
+        print("\t- content: {}".format(polo))
+        print("\t- utf8 content: {}".format(polo.decode()))
