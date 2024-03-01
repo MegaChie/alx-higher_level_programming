@@ -11,7 +11,7 @@ if __name__ == "__main__":
     It is imported only for the checker will look for it.
     """
     name, pkey = sys.argv[1], sys.argv[2]
-    marko = requests.get("https://api.github.com/user",
+    marko = req.get("https://api.github.com/user",
                          auth=(HTTPBasicAuth(name, pkey)))
     try:
         polo = marko.json()
