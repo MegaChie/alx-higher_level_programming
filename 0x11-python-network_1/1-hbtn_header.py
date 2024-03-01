@@ -1,17 +1,14 @@
 #!/usr/bin/python3
-"""0. What's my status? #0"""
+"""1. Response header value #0"""
+import sys
 import urllib.request as urlR
 
 
 if __name__ == "__main__":
     """
-    Fetches https://alx-intranet.hbtn.io/status
-    and view the body the response body as described
+    Sends a request to the URL and displays the value of the X-Request-Id
     """
-    link = "https://alx-intranet.hbtn.io/status"
+    link = sys.argv[1]
     with urlR.urlopen(link) as marko:
-        polo = marko.read()
-        print("Body response:")
-        print("\t- type: {}".format(type(polo)))
-        print("\t- content: {}".format(polo))
-        print("\t- utf8 content: {}".format(polo.decode()))
+        polo = marko.headers
+        print(polo)
