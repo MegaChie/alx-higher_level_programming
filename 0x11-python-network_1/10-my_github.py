@@ -8,12 +8,7 @@ if __name__ == "__main__":
     """
     Takes GitHub credentials and uses the GitHub API to display ID.
     """
-    # username
-    name = sys.argv[1]
-    # password
-    phra = sys.argv[2]
-    link = "https://api.github.com/user"
-    with req.get(link, auth=(HTTPBasicAuth(name, phra))) as marko:
-        polo = marko.json()
-        print(polo)
+    auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
+    r = req.get("https://api.github.com/user", auth=auth)
+    print(r.json().get("id"))
         # print(polo.get("id"))
