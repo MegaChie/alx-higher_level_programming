@@ -22,5 +22,5 @@ if __name__ == "__main__":
                 print("[{}] {}".format(polo.get("id"), polo.get("name")))
             else:
                 print("No result")
-        except JSONDecodeError:
+        except:
             print("Not a valid JSON")
