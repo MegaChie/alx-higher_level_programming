@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-"""0. What's my status? #0"""
-import urllib.request as urlR
+"""4. What's my status? #1"""
+import requests as req
 
 
 if __name__ == "__main__":
     """
-    Fetches https://alx-intranet.hbtn.io/status
-    and view the body the response body as described
+    Fetches https://alx-intranet.hbtn.io/status using requests library
+    and displays the body the response body as described
     """
     link = "https://alx-intranet.hbtn.io/status"
-    with urlR.urlopen(link) as marko:
-        polo = marko.read()
+    with req.get(link) as marko:
+        polo = marko.text
         print("Body response:")
         print("\t- type: {}".format(type(polo)))
         print("\t- content: {}".format(polo))
-        print("\t- utf8 content: {}".format(polo.decode()))
