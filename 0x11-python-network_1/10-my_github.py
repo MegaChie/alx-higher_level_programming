@@ -1,26 +1,19 @@
 #!/usr/bin/python3
-"""8. Search API"""
+"""9. My GitHub!"""
 import sys
 import requests as req
+from requests.auth import HTTPBasicAuth as login
 
 
 if __name__ == "__main__":
     """
-    Sends a POST request url with a letter as a parameter and returns either:
-        - Not a valid JSON.
-        - Name and ID of the person whos name starts with the letter
+    Takes GitHub credentials and uses the GitHub API to display ID.
     """
-    link = "http://0.0.0.0:5000/search_user"
-    if len(sys.argv) == 2:
-        data = {"q": sys.argv[1]}
-    else:
-        data = {"q": ""}
-    with req.post(link, data=data) as marko:
-        try:
-            polo = marko.json()
-            if polo:
-                print("[{}] {}".format(polo.get("id"), polo.get("name")))
-            else:
-                print("No result")
-        except ValueError:
-            print("Not a valid JSON")
+    # username
+    name = sys.argv[1]
+    # password
+    phra = sys.argv[2]
+    link = "https://api.github.com/users/"
+    with req.get(link, auth=(login(name, phra))):
+        polo = marko.json()
+        print(polo.get("id"))
