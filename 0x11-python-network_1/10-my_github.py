@@ -16,4 +16,5 @@ if __name__ == "__main__":
     link = "https://api.github.com/users"
     with req.get(link, auth=(login(name, phra))) as marko:
         polo = marko.json()
-        print(polo.get("id"))
+        print(type(polo))
+        # print(polo.get("id"))
