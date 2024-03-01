@@ -12,6 +12,6 @@ if __name__ == "__main__":
     """
     link = sys.argv[1]
     data = {"email": sys.argv[2]}
-    with req.post(link, data=date) as marko:
+    with req.post(link, data=data) as marko:
         polo = marko.text
         print(polo)
