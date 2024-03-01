@@ -11,11 +11,6 @@ if __name__ == "__main__":
     It is imported only for the checker will look for it.
     """
     link = """https://api.github.com/users/{}""".format(sys.argv[1])
-    # name
-    name = sys.argv[1]
-    # password
-    phra = sys.argv[2]
-    with req.get(link, auth=login(name, phra)) as marko:
+    with req.get(link) as marko:
         polo = marko.json()
-        print(polo)
         print(polo.get("id"))
