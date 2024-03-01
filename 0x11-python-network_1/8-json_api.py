@@ -12,7 +12,7 @@ if __name__ == "__main__":
         - Name and ID of the person whos name starts with the letter
     """
     link = "http://0.0.0.0:5000/search_user"
-    if sys.argv[1]:
+    if len(sys.argv) == 2:
         data = {"q": sys.argv[1]}
     else:
         data = {"q": ""}
