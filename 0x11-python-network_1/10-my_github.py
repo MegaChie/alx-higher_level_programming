@@ -13,4 +13,4 @@ if __name__ == "__main__":
     link = "https://api.github.com/search/users?q={}".format(sys.argv[1])
     with req.get(link) as marko:
         polo = marko.json()
-        print(polo)
+        print(polo["items"])
