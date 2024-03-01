@@ -1,20 +1,18 @@
 #!/usr/bin/python3
-"""3. Error code #0"""
+"""7. Error code #1"""
 import sys
-import urllib.error as urlE
-import urllib.parse as urlP
-import urllib.request as urlR
+import requests as req
 
 
 if __name__ == "__main__":
     """
     Sends a request to the URL and displays the body of the response
-    or displays the error code if the request fails
+    or displays the error code if the request fails using requests library
     """
     link = sys.argv[1]
-    try:
-        with urlR.urlopen(link) as marko:
-            polo = marko.read()
-            print(polo.decode())
-    except urlE.HTTPError as grab:
-        print("Error code: {}".format(grab.code))
+    with req.get(link) as marko:
+        if marko.status_code >= 400:
+            print("Error code: {}".format(marko.status_code))
+        else:
+            polo = marko.text
+            print(polo)
