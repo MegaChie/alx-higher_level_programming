@@ -18,4 +18,4 @@ if __name__ == "__main__":
     with req.get(link, auth=login(name, phra)) as marko:
         polo = marko.json()
         print(polo)
-        # print(polo["items"][0].get("id"))
+        print(polo.get("id"))
