@@ -15,4 +15,4 @@ if __name__ == "__main__":
     seriData = urlP.urlencode(data).encode("ascii")
     with urlR.urlopen(link, data=seriData) as marko:
         polo = marko.read()
-        print(polo)
+        print(polo.decode())
