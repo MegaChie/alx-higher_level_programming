@@ -11,6 +11,6 @@ if __name__ == "__main__":
     It is imported only for the checker will look for it.
     """
     auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
-    r = requests.get("https://api.github.com/user", auth=auth)
+    r = req.get("https://api.github.com/user", auth=auth)
     print(r.json().get("id"))
         # print(polo["items"][0].get("id"))
