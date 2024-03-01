@@ -13,6 +13,6 @@ if __name__ == "__main__":
     link = sys.argv[1]
     data = {"email": sys.argv[2]}
     seriData = urlP.urlencode(data).encode("ascii")
-    with urlR.urlopen(link, data=data) as marko:
+    with urlR.urlopen(link, data) as marko:
         polo = marko.read()
         print(polo)
