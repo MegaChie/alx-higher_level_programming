@@ -10,7 +10,6 @@ if __name__ == "__main__":
     sends a request to the URL and displays the body of the response
     """
     link = sys.argv[1]
-    with urlR.urlopen(link) as marko:
     try:
         with urlR.urlopen(link) as marko:
             polo = marko.read()
