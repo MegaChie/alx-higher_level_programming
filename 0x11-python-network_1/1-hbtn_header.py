@@ -11,4 +11,4 @@ if __name__ == "__main__":
     link = sys.argv[1]
     with urlR.urlopen(link) as marko:
         polo = marko.headers
-        print(polo)
+        print(polo.get("X-Request-Id"))
