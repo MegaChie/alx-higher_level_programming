@@ -8,8 +8,8 @@ import requests as req
 if __name__ == "__main__":
     """
     Sends a POST request url with a letter as a parameter and returns either:
-        - Not a valid JSON.
-        - Name and ID of the person whos name starts with the letter
+    - Not a valid JSON.
+    - Name and ID of the person whos name starts with the letter
     """
     link = "http://0.0.0.0:5000/search_user"
     if len(sys.argv) == 2:
