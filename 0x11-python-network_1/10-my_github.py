@@ -17,4 +17,4 @@ if __name__ == "__main__":
     url = "https://api.github.com/{}".format(sys.argv[2])
 
     response = req.get(url, headers=headers)
-    print(json.dumps(response.json(), indent=4))
+    print(response.json())
