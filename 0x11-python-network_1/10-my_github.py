@@ -14,6 +14,6 @@ if __name__ == "__main__":
     # password
     phra = sys.argv[2]
     link = "https://api.github.com/users/"
-    with req.get(link, auth=(login(name, phra))):
+    with req.get(link, auth=(login(name, phra))) as marko:
         polo = marko.json()
         print(polo.get("id"))
