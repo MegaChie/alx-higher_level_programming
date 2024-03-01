@@ -16,8 +16,11 @@ if __name__ == "__main__":
     else:
         data = {"q": ""}
     with req.post(link, data=data) as marko:
-        polo = marko.json()
-        if polo:
-            print("[{}] {}".format(polo.get("id"), polo.get("name")))
-        else:
-            print("No result")
+        try:
+            polo = marko.json()
+            if polo:
+                print("[{}] {}".format(polo.get("id"), polo.get("name")))
+            else:
+                print("No result")
+        except ValueError:
+            print("Not a valid JSON")
