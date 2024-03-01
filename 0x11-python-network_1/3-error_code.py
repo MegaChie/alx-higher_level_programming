@@ -16,4 +16,4 @@ if __name__ == "__main__":
             polo = marko.read()
             print(polo.decode())
     except urlE.HTTPError as grab:
-        print("Error code: {}".fromat(grab.code))
+        print("Error code: {}".format(grab.code))
