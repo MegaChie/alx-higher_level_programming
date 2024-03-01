@@ -1,18 +1,27 @@
 #!/usr/bin/python3
-"""7. Error code #1"""
+"""8. Search API"""
+import json
 import sys
 import requests as req
 
 
 if __name__ == "__main__":
     """
-    Sends a request to the URL and displays the body of the response
-    or displays the error code if the request fails using requests library
+    Sends a POST request url with a letter as a parameter and returns either:
+        - Not a valid JSON.
+        - Name and ID of the person whos name starts with the letter
     """
     link = sys.argv[1]
-    with req.get(link) as marko:
-        if marko.status_code >= 400:
-            print("Error code: {}".format(marko.status_code))
-        else:
-            polo = marko.text
-            print(polo)
+    if sys.argv[2]:
+        data = {"q": sys.argv[2]}
+    else:
+        data = {"q": ""}
+    with req.post(link, data=data) as marko:
+        try:
+            polo = marko.json()
+            if polo:
+                print("[{}] {}".format(polo.get("id"), polo.get("name")))
+            else:
+                print("No result")
+        except JSONDecodeError:
+            print("Not a valid JSON")
