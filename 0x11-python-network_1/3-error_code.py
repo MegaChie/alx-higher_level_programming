@@ -11,8 +11,9 @@ if __name__ == "__main__":
     """
     link = sys.argv[1]
     with urlR.urlopen(link) as marko:
-        try:
+    try:
+        with urlR.urlopen(link) as marko:
             polo = marko.read()
             print(polo.decode())
-        except urllib.error.HTTPError as grab:
-            print("Error code: {}".fromat(grab.code))
+    except urllib.error.HTTPError as grab:
+        print("Error code: {}".fromat(grab.code))
