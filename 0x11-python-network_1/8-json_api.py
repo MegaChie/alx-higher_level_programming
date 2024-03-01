@@ -11,9 +11,9 @@ if __name__ == "__main__":
         - Not a valid JSON.
         - Name and ID of the person whos name starts with the letter
     """
-    link = sys.argv[1]
-    if sys.argv[2]:
-        data = {"q": sys.argv[2]}
+    link = "http://0.0.0.0:5000/search_user"
+    if sys.argv[1]:
+        data = {"q": sys.argv[1]}
     else:
         data = {"q": ""}
     with req.post(link, data=data) as marko:
