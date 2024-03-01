@@ -13,3 +13,4 @@ if __name__ == "__main__":
     with requ.get(link) as marko:
         polo = marko.headers
         print(polo.get("X-Request-Id"))
+        prinnt(type(polo))
