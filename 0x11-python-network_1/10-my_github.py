@@ -10,7 +10,9 @@ if __name__ == "__main__":
     It does not use HTTPBasicAuth, using it requires a PAT.
     It is imported only for the checker will look for it.
     """
-    link = """https://api.github.com/users/{}""".format(sys.argv[1])
-    with req.get(link) as marko:
+    n = sys.argv[1]
+    p = sys.argv[2]
+    link = """https://api.github.com/user"""
+    with req.get(link, auth=login(n, p)) as marko:
         polo = marko.json()
         print(polo.get("id"))
