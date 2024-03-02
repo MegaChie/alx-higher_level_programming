@@ -13,4 +13,4 @@ if __name__ == "__main__":
     with req.get(link) as marko:
     polo = marko.json()
         for i in range(10):
-            print("{}".format(polo[i]["sha"])
+            print("{}".format(polo[i]["sha"]))
