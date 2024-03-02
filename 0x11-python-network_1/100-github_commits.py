@@ -9,7 +9,7 @@ if __name__ == "__main__":
     and displays last commit IDs and names of commiters
     """
     link = """https://api.github.com/repos/
-              {}/{}/commits""".format(sys.argv[2], sys.argv[1])
+              {}/{}/stats/contributors""".format(sys.argv[2], sys.argv[1])
     with req.get(link) as marko:
         print(marko.status_code)
         polo = marko.json()
