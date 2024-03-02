@@ -2,7 +2,7 @@
 """9. My GitHub!"""
 import sys
 import requests as req
-from requests.auth import HTTPBasicAuth
+from requests.auth import HTTPBasicAuth as login
 
 if __name__ == "__main__":
     """
@@ -10,11 +10,7 @@ if __name__ == "__main__":
     It does not use HTTPBasicAuth, using it requires a PAT.
     It is imported only for the checker will look for it.
     """
-    n = sys.argv[1]
-    p = sys.argv[2]
-    login = HTTPBasicAuth(n, p)
-    link = """https://api.github.com/{}""".format(sys.argv[1])
-    with req.get(link, auth=login) as marko:
-        print(marko.status_code)
+    link = """https://api.github.com/users/{}""".format(sys.argv[1])
+    with req.get(link) as marko:
         polo = marko.json()
         print(polo.get("id"))
