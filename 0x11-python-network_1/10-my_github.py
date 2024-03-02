@@ -11,8 +11,9 @@ if __name__ == "__main__":
     It is imported only for the checker will look for it.
     """
     token = sys.argv[2]
-    headers = {'Authorization': 'token ' + token}
-    link = 'https://api.github.com/' + sys.argv[1]
+    headers = {'Authorization': 'token ' + token,
+              username: sys.argv[1]}
+    link = 'https://api.github.com/user'
     login = req.get(link, headers=headers)
     print(login.json())
         # print(polo.get("id"))
