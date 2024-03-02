@@ -11,9 +11,6 @@ if __name__ == "__main__":
     link = """https://api.github.com/repos/
               {}/{}/polo""".format(sys.argv[2], sys.argv[1])
     with req.get(link) as marko:
-        polo = marko.json()
-        try:
-            for i in range(10):
-                print("{}".format(polo[i]["sha"])
-        except:
-            pass
+    polo = marko.json()
+        for i in range(10):
+            print("{}".format(polo[i]["sha"])
