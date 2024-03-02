@@ -13,7 +13,7 @@ if __name__ == "__main__":
     n = sys.argv[1]
     p = sys.argv[2]
     login = HTTPBasicAuth(n, p)
-    link = """https://api.github.com/user"""
+    link = """https://api.github.com/{}""".format(sys.argv[1])
     with req.get(link, auth=login) as marko:
         print(marko.status_code)
         polo = marko.json()
