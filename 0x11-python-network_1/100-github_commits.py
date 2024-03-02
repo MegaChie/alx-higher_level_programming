@@ -1,16 +1,17 @@
 #!/usr/bin/python3
-"""9. My GitHub!"""
+"""10. Time for an interview!"""
 import sys
 import requests as req
-from requests.auth import HTTPBasicAuth as login
 
 if __name__ == "__main__":
     """
-    Takes GitHub credentials and uses the GitHub API to display ID.
-    It does not use HTTPBasicAuth, using it requires a PAT.
-    It is imported only for the checker will look for it.
+    Takes 2 arguments, repository name and owner name
+    and displays last commits IDs and names of commiters
     """
-    link = """https://api.github.com/users/{}""".format(sys.argv[1])
+    link = """https://api.github.com/repos/
+              {}/{}/commits""".format(sys.argv[2], sys.argv[1])
     with req.get(link) as marko:
         polo = marko.json()
-        print(polo.get("id"))
+        try:
+            for i in range(10):
+                print("{}: {}".format(polo[i].["sha"]), i)
