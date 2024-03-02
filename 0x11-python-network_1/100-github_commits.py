@@ -8,7 +8,7 @@ if __name__ == "__main__":
     Takes 2 arguments, repository name and owner name
     and displays last commit IDs and names of commiters
     """
-    link = """https://api.github.com/repos/
-              {}/{}/commits""".format(sys.argv[2], sys.argv[1])
+    link = """https://api.github.com/repos/{}/{}/commits""".format(sys.argv[2],
+                                                                   sys.argv[1])
     with req.get(link) as marko:
         print(marko.status_code)
