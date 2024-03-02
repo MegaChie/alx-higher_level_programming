@@ -14,6 +14,7 @@ if __name__ == "__main__":
         polo = marko.json()
         try:
             for i in range(10):
-                print(polo[i]["sha"])
+                print("{}: {}".format(polo[i]["sha"],
+                                      polo[i]["commit"]["author"]["name"]))
         except IndexError:
             pass
