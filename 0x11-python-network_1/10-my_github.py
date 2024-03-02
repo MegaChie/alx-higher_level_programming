@@ -12,7 +12,7 @@ if __name__ == "__main__":
     """
     token = sys.argv[2]
     headers = {'Authorization': 'token ' + token}
-
-    login = req.get('https://api.github.com/user', headers=headers)
+    link = 'https://api.github.com/' + sys.argv[1]
+    login = req.get(link, headers=headers)
     print(login.json())
         # print(polo.get("id"))
