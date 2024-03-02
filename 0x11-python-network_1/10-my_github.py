@@ -2,7 +2,7 @@
 """9. My GitHub!"""
 import sys
 import requests as req
-from requests.auth import HTTPBasicAuth as login
+from requests.auth import HTTPBasicAuth
 
 if __name__ == "__main__":
     """
@@ -12,8 +12,9 @@ if __name__ == "__main__":
     """
     n = sys.argv[1]
     p = sys.argv[2]
+    login = HTTPBasicAuth(n, p)
     link = """https://api.github.com/user"""
-    with req.get(link, auth=login(n, p)) as marko:
+    with req.get(link, auth=login) as marko:
         print(marko.status_code)
         polo = marko.json()
         print(polo.get("id"))
