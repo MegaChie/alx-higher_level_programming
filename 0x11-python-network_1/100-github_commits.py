@@ -11,4 +11,9 @@ if __name__ == "__main__":
     link = """https://api.github.com/repos/{}/{}/commits""".format(sys.argv[2],
                                                                    sys.argv[1])
     with req.get(link) as marko:
-        print(marko.status_code)
+        polo = marko.json()
+        try:
+            for i in range(10):
+                print(polo[i]["sha"])
+        except IndexError:
+            pass
