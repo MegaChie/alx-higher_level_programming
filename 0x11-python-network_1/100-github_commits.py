@@ -13,5 +13,5 @@ if __name__ == "__main__":
     with req.get(link) as marko:
         print(marko.status_code)
         polo = marko.json()
-        for i in range(10):
-            print("{}".format(polo[i]["sha"]))
+        # for i in range(10):
+        #     print("{}".format(polo[i]["sha"]))
