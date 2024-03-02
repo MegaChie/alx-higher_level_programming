@@ -10,6 +10,6 @@ if __name__ == "__main__":
     It does not use HTTPBasicAuth, using it requires a PAT.
     It is imported only for the checker will look for it.
     """
-    auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
-    r = requests.get("https://api.github.com/user", auth=auth)
+    auth = login(sys.argv[1], sys.argv[2])
+    r = req.get("https://api.github.com/user", auth=auth)
     print(r.json().get("id"))
