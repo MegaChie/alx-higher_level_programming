@@ -12,7 +12,7 @@ if __name__ == "__main__":
     """
     token = sys.argv[2]
     headers = {'Authorization': 'token ' + token,
-              username: sys.argv[1]}
+               'username': sys.argv[1]}
     link = 'https://api.github.com/user'
     login = req.get(link, headers=headers)
     print(login.json())
