@@ -10,5 +10,5 @@ fs.get(link, function (error, polo, body) {
     for (let i = 0; i < date.length; i++) {
       name[i] = data[i]
     }
-})
+}})
 cosole.log(name);
